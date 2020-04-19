@@ -1,0 +1,46 @@
+<view>
+	<swiper class="screen-swiper  square-dot " indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+		<swiper-item>
+			<image src="http://img1.imgtn.bdimg.com/it/u=3675415932,4054970339&fm=26&gp=0.jpg"></image>
+		</swiper-item>
+		<swiper-item>
+			<image src="http://img1.imgtn.bdimg.com/it/u=3857696996,2875137765&fm=26&gp=0.jpg"></image>
+		</swiper-item>
+		<swiper-item>
+			<image src="http://i1.hdslb.com/bfs/archive/61d0469db76742f810493ef0c1d85044ede256d7.jpg"></image>
+		</swiper-item>
+	</swiper>
+</view>
+
+
+<view class="cu-list grid col-3 no-border">
+	<view class="cu-item" wx:for="{{departmentList}}" wx:key="index">
+		<navigator hover-class="none">
+			<view class="cuIcon-{{item.icon}} text-{{item.color}}"></view>
+			<text>{{item.name}}</text>
+		</navigator>
+	</view>
+	<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+		<view class="cuIcon-evaluate_fill text-cyan"></view>
+		<text>公众号</text>
+	</view>
+	<view class="cu-item" class="cu-item" bindtap='goIdentity' hover-class="none">
+		<view class="cuIcon-text text-pink"></view>
+		<text>报名入口</text>
+	</view>
+</view>
+
+<view class='notice'>
+	<view class='notice-nav'>
+		<view class="cuIcon-notice text-cyan">信息通知</view>
+	</view>
+	
+	<button bindtap="goNoticeList" class="notice-btn">查看更多</button>
+</view>
+
+<!-- <view class="part" wx:for="{{noticeList}}" wx:key="index" data-id="{{item._id}}">
+		<navigator url='/pages/info/noticeDetail/noticeDetail?id={{item._id}}' hover-class='none'>
+			<text class="part-title">{{item._title}}</text>
+			<view class="part-time">{{item._time}}</view>
+		</navigator>
+	</view> -->

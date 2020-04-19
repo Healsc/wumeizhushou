@@ -1,0 +1,41 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/wumei/wumei/wumei",
+        "pages/profile/profile/profile",
+
+        "pages/notice/noticeList/noticeList",
+        "pages/notice/noticeDetail/noticeDetail"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTitleText": "东农舞美助手",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "images/icon/home.png",
+                "selectedIconPath": "images/icon/home-sel.png"
+            },
+            {
+                "pagePath": "pages/wumei/wumei/wumei",
+                "text": "舞美",
+                "iconPath": "images/icon/wm.png",
+                "selectedIconPath": "images/icon/wm-sel.png"
+            },
+            {
+                "pagePath": "pages/profile/profile/profile",
+                "text": "我的",
+                "iconPath": "images/icon/wode.png",
+                "selectedIconPath": "images/icon/wode-sel.png"
+            }
+
+        ],
+        "selectedColor": "#A0EEE1"
+    }
+}

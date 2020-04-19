@@ -1,0 +1,31 @@
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.notice {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #888;
+}
+
+.notice-nav {
+  width: 100%;
+  padding-left: 50rpx;
+  min-height: 100rpx;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+
+.notice-btn {
+  background-color: #fff;
+  margin: 20rpx 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
