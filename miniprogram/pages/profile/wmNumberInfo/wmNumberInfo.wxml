@@ -1,4 +1,4 @@
-<cu-custom bgColor="bg-gradual-mauve" isBack="{{true}}">
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
 	<view slot="left">返回</view>
 	<view slot="content">认证信息</view>
 </cu-custom>
