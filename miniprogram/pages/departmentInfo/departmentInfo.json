@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "htmltowxml": "plugin://htmltowxml/view",
+    "wxparser": "plugin://wxparserPlugin/wxparser",
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true 
+}

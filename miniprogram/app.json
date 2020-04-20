@@ -3,9 +3,19 @@
         "pages/index/index",
         "pages/wumei/wumei/wumei",
         "pages/profile/profile/profile",
+        "pages/profile/about/about",
+        "pages/profile/wmIdentify/wmIdentify",
+        "pages/profile/updataLog/updataLog",
+        "pages/profile/wmNumberInfo/wmNumberInfo",
+
+
+        "pages/departmentInfo/departmentInfo",
 
         "pages/notice/noticeList/noticeList",
-        "pages/notice/noticeDetail/noticeDetail"
+        "pages/notice/noticeDetail/noticeDetail",
+
+        "pages/admin/addNotice/addNotice",
+        "pages/admin/updataDepartment/updataDepartment"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",
@@ -37,5 +47,15 @@
 
         ],
         "selectedColor": "#A0EEE1"
+    },
+    "plugins": {
+        "htmltowxml": {
+            "version": "1.4.0",
+            "provider": "wxa51b9c855ae38f3c"
+        },
+        "wxparserPlugin": {
+            "version": "0.3.0",
+            "provider": "wx9d4d4ffa781ff3ac"
+        }
     }
 }

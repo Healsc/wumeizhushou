@@ -1,1 +1,16 @@
-/* pages/notice/noticeList/noticeList.wxss */
+.part {
+    padding: .6rem .6rem 2rem 1.6rem;
+    min-height: 2.4rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.part .part-title {
+    font-size: 18px;
+}
+
+.part .part-time {
+    font-size: 14px;
+    position: absolute;
+    right: 1rem;
+}

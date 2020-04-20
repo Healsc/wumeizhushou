@@ -1,0 +1,35 @@
+.cu-form-group .title {
+    min-width: calc(4em + 60rpx);
+}
+
+.steps-bottom.cu-steps .cu-item .num::before {
+    content: "\e668";
+    font-family: 'iconfont';
+}
+
+.text-center {
+    position: absolute;
+    left: 30vw;
+}
+
+.pad-left {
+    padding-left: 50rpx;
+}
+
+.pad-left-cont {
+    padding-left: 150rpx;
+}
+
+.show-img {
+    width: 240rpx;
+    height: 240rpx;
+    position: absolute;
+    top: 200rpx;
+    right: 50rpx;
+    opacity: .6;
+}
+
+.admin-btn {
+    background-color: #32CD32;
+    margin-top: 1rem;
+}

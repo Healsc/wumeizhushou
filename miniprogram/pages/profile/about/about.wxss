@@ -1,0 +1,9 @@
+.bg-img{
+    margin: .6rem .8rem;
+    background-image: url('https://7072-production-ue9j7-1301900827.tcb.qcloud.la/huibiao/huibiao-1.png?sign=6f05ed54f06b52da57262ee7bc7b3730&t=1587371518');
+    background-repeat:no-repeat;
+    z-index: -1;
+}
+.bg-img .about-content{
+    z-index: 9;
+}

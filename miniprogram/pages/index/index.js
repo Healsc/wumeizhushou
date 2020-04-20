@@ -41,12 +41,51 @@ Page({
         id: "waiqinbu"
       }
     ],
+    noticeList: []
   },
 
   onLoad: function () {
-
+    setTimeout(() => {
+      wx.stopPullDownRefresh();
+    }, 2000);
+    this.getNoticeList()
   },
-
-
-
+  getNoticeList() {
+    wx.cloud.callFunction({
+      name: 'getNoticeList',
+      data: {
+        skip: 0,
+        limit: 6
+      }
+    }).then((res) => {
+      this.setData({
+        noticeList: res.result.data
+      })
+      // console.log(res)
+    })
+  },
+  goNoticeList() {
+    wx.navigateTo({
+      url: '/pages/notice/noticeList/noticeList',
+    })
+  },
+  showQrcode() {
+    wx.previewImage({
+      urls: ['cloud://production-ue9j7.7072-production-ue9j7-1301900827/gongzhonghao/gongzhonghao.png'],
+      current: 'https://7072-production-ue9j7-1301900827.tcb.qcloud.la/gongzhonghao/gongzhonghao.png?sign=c66f3fe3eaaa7e8cc7247350c5092805&t=1587362686' // 当前显示图片的http链接      
+    })
+  },
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+    let that = this;
+    this.onLoad();
+  },
+  onShareAppMessage: function () {
+    return {
+      title: '东农舞美助手',
+      path: "/pages/index/index"
+    }
+  }
 })

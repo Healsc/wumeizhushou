@@ -1,20 +1,49 @@
 // pages/notice/noticeList/noticeList.js
+const db = wx.cloud.database();
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        noticeList: [],
+        noticeCount: 0
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.getNoticeList();
+        this.getCount();
     },
-
+    getNoticeList() {
+        wx.showLoading({
+          title: '加载中',
+        })
+        wx.cloud.callFunction({
+            name: 'getNoticeList',
+            data: {
+                skip: this.data.noticeList.length,
+                limit: 15
+            }
+        }).then(res => {
+            wx.stopPullDownRefresh();
+            wx.hideLoading();
+            this.setData({
+                noticeList: this.data.noticeList.concat(res.result.data)
+            })
+          //  console.log(res.result.data)
+        })
+    },
+    getCount() {
+        db.collection('notice').count().then((res) => {
+           // console.log(res)
+            this.setData({
+                noticeCount: res.total
+            })
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -47,13 +76,22 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
+        let that = this;
+        that.setData({
+            noticeList: [],
+            noticeCount: 0
+        })
 
+        that.onLoad();
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
+        if (this.data.noticeCount != this.data.noticeList.length) {
+            this.getNoticeList();
+        }
 
     },
 

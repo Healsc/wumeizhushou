@@ -1,2 +1,8 @@
-<!--pages/notice/noticeDetail/noticeDetail.wxml-->
-<text>pages/notice/noticeDetail/noticeDetail.wxml</text>
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">信息通知</view>
+</cu-custom>
+<view class="detail">  
+	<!-- <htmltowxml text="{{content}}" /> -->
+	<wxparser rich-text="{{content}}" />
+</view>

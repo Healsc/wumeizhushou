@@ -30,13 +30,95 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 0,
 			"list": [
 				{
 					"id": -1,
 					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/addNotice/addNotice",
+					"pathName": "pages/admin/addNotice/addNotice",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/notice/noticeList/noticeList",
+					"pathName": "pages/notice/noticeList/noticeList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/notice/noticeList/noticeList",
+					"pathName": "pages/notice/noticeList/noticeList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/updataDepartment/updataDepartment",
+					"pathName": "pages/admin/updataDepartment/updataDepartment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/departmentInfo/departmentInfo",
+					"pathName": "pages/departmentInfo/departmentInfo",
+					"query": "id=jijianbu",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/profile/profile",
+					"pathName": "pages/profile/profile/profile",
+					"query": "id=jijianbu",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/about/about",
+					"pathName": "pages/profile/about/about",
+					"query": "id=jijianbu",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/wmIdentify/wmIdentify",
+					"pathName": "pages/profile/wmIdentify/wmIdentify",
+					"query": "id=jijianbu",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/wmNumberInfo/wmNumberInfo",
+					"pathName": "pages/profile/wmNumberInfo/wmNumberInfo",
+					"query": "id=jijianbu",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/wmNumberInfo/wmNumberInfo",
+					"pathName": "pages/profile/wmNumberInfo/wmNumberInfo",
+					"query": "id=jijianbu",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/updataLog/updataLog",
+					"pathName": "pages/profile/updataLog/updataLog",
+					"query": "id=jijianbu",
+					"scene": null
 				}
 			]
 		}

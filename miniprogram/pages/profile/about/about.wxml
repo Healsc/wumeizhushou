@@ -1,0 +1,17 @@
+<cu-custom bgColor="bg-gradual-orange" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">关于我们</view>
+</cu-custom>
+
+
+<view class=' bg-white padding-xl radius shadow-lg bg-img'>
+	<view class='text-center margin-bottom text-lg  text-grey'>关于东农舞美助手小程序</view>
+	<view class='text-content about-content'>
+		<view>Hi！开发者~欢迎使用ColorUI组件库！</view>
+		<view class='margin-top-sm'>该项目是舞美协会成员开发的一款微信小程序。</view>
+		<view class='margin-top-sm'>该小程序旨在为舞美协会提供服务。</view>
+		<view class='margin-top-sm'>开发团队只有两个人，存在一些不完善之处。</view>
+		<view class='margin-top-sm'>对于小程序的不合理之处，请指正。</view>
+		<view class='margin-top-sm'>联系邮箱:wumeixiehui@163.com</view>
+	</view>
+</view>

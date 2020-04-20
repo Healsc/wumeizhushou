@@ -1,2 +1,10 @@
-<!--pages/notice/noticeList/noticeList.wxml-->
-<text>pages/notice/noticeList/noticeList.wxml</text>
+<cu-custom bgColor="bg-gradual-red" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">信息通知</view>
+</cu-custom>
+<view class="part" wx:for="{{noticeList}}" wx:key="index" data-id="{{item._id}}">
+    <navigator url='/pages/notice/noticeDetail/noticeDetail?id={{item._id}}' hover-class='none'>
+        <text class="part-title">{{item._title}}</text>
+        <view class="part-time">{{item._time}}</view>
+    </navigator>
+</view>

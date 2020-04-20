@@ -1,5 +1,6 @@
+<!-- 轮播图开始 -->
 <view>
-	<swiper class="screen-swiper  square-dot " indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+	<swiper class="screen-swiper  square-dot " indicator-dots="true" circular="true" autoplay="true" interval="3000" duration="500">
 		<swiper-item>
 			<image src="http://img1.imgtn.bdimg.com/it/u=3675415932,4054970339&fm=26&gp=0.jpg"></image>
 		</swiper-item>
@@ -11,11 +12,13 @@
 		</swiper-item>
 	</swiper>
 </view>
+<!-- 轮播图结束 -->
 
 
+<!-- 导航 部门开始 -->
 <view class="cu-list grid col-3 no-border">
 	<view class="cu-item" wx:for="{{departmentList}}" wx:key="index">
-		<navigator hover-class="none">
+		<navigator url='/pages/departmentInfo/departmentInfo?id={{item.id}}' hover-class="none">
 			<view class="cuIcon-{{item.icon}} text-{{item.color}}"></view>
 			<text>{{item.name}}</text>
 		</navigator>
@@ -24,23 +27,27 @@
 		<view class="cuIcon-evaluate_fill text-cyan"></view>
 		<text>公众号</text>
 	</view>
-	<view class="cu-item" class="cu-item" bindtap='goIdentity' hover-class="none">
+	
+	<!-- <view class="cu-item" class="cu-item" bindtap='goIdentity' hover-class="none">
 		<view class="cuIcon-text text-pink"></view>
 		<text>报名入口</text>
-	</view>
+	</view> -->
 </view>
+<!-- 导航 部门结束 -->
 
+<!-- 信息通知开始 -->
 <view class='notice'>
 	<view class='notice-nav'>
 		<view class="cuIcon-notice text-cyan">信息通知</view>
 	</view>
-	
-	<button bindtap="goNoticeList" class="notice-btn">查看更多</button>
-</view>
 
-<!-- <view class="part" wx:for="{{noticeList}}" wx:key="index" data-id="{{item._id}}">
-		<navigator url='/pages/info/noticeDetail/noticeDetail?id={{item._id}}' hover-class='none'>
+	<view class="part" wx:for="{{noticeList}}" wx:key="index" data-id="{{item._id}}">
+		<navigator url='/pages/notice/noticeDetail/noticeDetail?id={{item._id}}' hover-class='none'>
 			<text class="part-title">{{item._title}}</text>
 			<view class="part-time">{{item._time}}</view>
 		</navigator>
-	</view> -->
+	</view>
+
+	<button bindtap="goNoticeList" class="notice-btn">查看更多</button>
+</view>
+<!-- 信息通知结束 -->

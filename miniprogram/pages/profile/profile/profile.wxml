@@ -1,2 +1,59 @@
-<!--pages/profile/profile/profile.wxml-->
-<text>pages/profile/profile/profile.wxml</text>
+<view class="top">
+	<image class="top-bc" src="https://image.weilanwl.com/color2.0/index.jpg"></image>
+	<view wx:if="{{isShowUserInfo}}" class="user">
+		<image class="user-img" src="{{userInfo.avatarUrl}}"></image>
+		<view class="user-name">{{userInfo.nickName}}</view>
+	</view>
+	<button class="show-user-btn" wx:if="{{isShowUserBtn}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
+</view>
+
+<view class="cu-list menu   margin-bottom-xl shadow-lg radius" style='margin-top:1rpx'>
+	<view class="cu-item arrow">
+		<navigator class="content" url="/pages/profile/about/about" hover-class="none">
+			<image src="https://7072-production-ue9j7-1301900827.tcb.qcloud.la/huibiao/huibiao-1.png?sign=f01a9bc1c2d0ac195991adc9161fdb52&t=1587369702" class="png" mode="aspectFit"></image>
+			<text class="text-grey">关于我们</text>
+		</navigator>
+	</view>
+	<view class="cu-item arrow">
+		<button class="cu-btn content" open-type="contact" hover-class="none">
+			<text class="cuIcon-servicefill text-cyan"></text>
+			<text class="text-grey">在线客服</text>
+		</button>
+	</view>
+	<view class="cu-item arrow">
+		<button class="cu-btn content" open-type="feedback" hover-class="none">
+			<text class="cuIcon-writefill text-green"></text>
+			<text class="text-grey">意见反馈</text>
+		</button>
+	</view>
+	<view class="cu-item arrow">
+		<navigator class="content" url="/pages/profile/updataLog/updataLog" hover-class="none">
+			<text class="cuIcon-formfill text-green"></text>
+			<text class="text-grey">更新日志</text>
+		</navigator>
+	</view>
+
+	<view class="cu-item arrow">
+		<button class="cu-btn content" bindtap="openSetting" hover-class="none">
+			<text class="cuIcon-settingsfill text-green"></text>
+			<text class="text-grey">系统设置</text>
+		</button>
+	</view>
+	<view class="cu-item arrow">
+		<view class="content" bindtap="goWNIdentify" hover-class="none">
+			<text class="cuIcon-creativefill text-orange"></text>
+			<text class="text-grey">舞美认证</text>
+		</view>
+
+
+
+	</view>
+
+	<view class="cu-item arrow">
+		<button class="cu-btn content" open-type="share" hover-class="none">
+			<text class="cuIcon-share text-green"></text>
+			<text class="text-grey">分享小程序</text>
+		</button>
+	</view>
+
+</view>
