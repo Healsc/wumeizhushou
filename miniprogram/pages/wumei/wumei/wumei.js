@@ -1,66 +1,135 @@
-// pages/wumei/wumei/wumei.js
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
-
+        openid: "",
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
+    goClass(){
+        wx.navigateTo({
+          url: '/pages/wumei/class/class',
+        })
+    },
     onLoad: function (options) {
-
+        this.getOpenid();
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
+    goToWeekClass(){
+        const db = wx.cloud.database({
+            //env: 'wumei-2070bb'
+        })
+        db.collection('wumeiInfo').where({
+            _openid: this.data.openid,// 填入当前用户 openid
+            _isWM:1 //验证是否为舞美成员
+        }).get({
+            success: (res) => {
+                if(res.data.length){
+                    wx.navigateTo({
+                        url: '/pages/wumei/getweekclass/getweekclass',
+                    })
+                }else{
+                    wx.showModal({
+                        title: '抱歉',
+                        content: '您尚未进行舞美认证或认证审核中',
+                    })
+                }
+            }
+        })
+        
     },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
+    goShowClass() {
+        const db = wx.cloud.database({
+            //env: 'wumei-2070bb'
+        })
+        db.collection('wumeiInfo').where({
+            _openid: this.data.openid,// 填入当前用户 openid
+            _isWM: 1 //验证是否为舞美成员
+        }).get({
+            success: (res) => {
+                if (res.data.length) {
+                    wx.navigateTo({
+                        url: '/pages/wumei/showweekclass/showweekclass',
+                    })
+                } else {
+                    wx.showModal({
+                        title: '抱歉',
+                        content: '您尚未进行舞美认证或认证审核中',
+                    })
+                }
+            },
+            fail: (res) => {
+                wx.showModal({
+                    title: '提示',
+                    content: '请刷新',
+                })
+            } 
+        })
     },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
+    goZhibanWeek(){
+        const db = wx.cloud.database({
+            //env: 'wumei-2070bb'
+        })
+        db.collection('wumeiInfo').where({
+            _openid: this.data.openid,// 填入当前用户 openid
+            _isWM: 1 //验证是否为舞美成员
+        }).get({
+            success: (res) => {
+                if (res.data.length) {
+                    wx.navigateTo({
+                        url: '/pages/wumei/zhiban/zhiban',
+                    })
+                } else {
+                    wx.showModal({
+                        title: '抱歉',
+                        content: '您尚未进行舞美认证或认证审核中',
+                    })
+                }
+            },
+            fail: (res) => {
+                wx.showModal({
+                    title: '提示',
+                    content: '请刷新',
+                })
+            }
+        })
     },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
+    goQiandao() {
+        const db = wx.cloud.database({
+           // env: 'wumei-2070bb'
+        })
+        db.collection('wumeiInfo').where({
+            _openid: this.data.openid,// 填入当前用户 openid
+          
+            _isWM: 1 //验证是否为舞美成员
+        }).get({
+            success: (res) => {
+                if (res.data.length) {
+                    wx.navigateTo({
+                        url: '/pages/wumei/huodongInfo/huodongInfo',
+                    })
+                } else {
+                    wx.showModal({
+                        title: '抱歉',
+                        content: '您尚未进行舞美认证或认证审核中',
+                    })
+                }
+            },
+            fail: (res) => {
+                wx.showModal({
+                    title: '提示',
+                    content: '请刷新',
+                })
+            }
+        })
     },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
-    }
+    // 获取用户openid
+    getOpenid() {
+        let that = this;
+        wx.cloud.callFunction({
+            name: 'login',
+            complete: res => {
+                var openid = res.result.openid;
+                that.setData({
+                    openid: openid
+                })
+            }
+        })
+    },  
 })

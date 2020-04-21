@@ -2,6 +2,10 @@
     "pages": [
         "pages/index/index",
         "pages/wumei/wumei/wumei",
+        "pages/wumei/class/class",
+        "pages/wumei/getClassWeek/getClassWeek",
+        "pages/wumei/getClassDetail/getClassDetail",
+
         "pages/profile/profile/profile",
         "pages/profile/about/about",
         "pages/profile/wmIdentify/wmIdentify",

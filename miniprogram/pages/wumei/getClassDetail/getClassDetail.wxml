@@ -1,0 +1,88 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">第{{weekId}}周</view>
+</cu-custom>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+	<view class="table">
+		<view class="tr bg-gradual-green">
+			<view class="th">课\r\t\周</view>
+			<view class="th">周\r\t一</view>
+			<view class="th">周\r\t二</view>
+			<view class="th">周\r\t三</view>
+			<view class="th">周\r\t四</view>
+			<view class="th">周\r\t五</view>
+		</view>
+
+		<view class="tr ">
+			<view class="td bg-green light">1</view>
+			<view wx:if="{{class11}}" class="td bg-cyan" bindtap="updata11">有课</view>
+			<view wx:if="{{!class11}}" class="td bg-olive light" bindtap="updata11">无课</view>
+			<view wx:if="{{class21}}" class="td bg-cyan" bindtap="updata21">有课</view>
+			<view wx:if="{{!class21}}" class="td bg-olive light" bindtap="updata21">无课</view>
+			<view wx:if="{{class31}}" class="td bg-cyan" bindtap="updata31">有课</view>
+			<view wx:if="{{!class31}}" class="td bg-olive light" bindtap="updata31">无课</view>
+			<view wx:if="{{class41}}" class="td bg-cyan" bindtap="updata41">有课</view>
+			<view wx:if="{{!class41}}" class="td bg-olive light" bindtap="updata41">无课</view>
+			<view wx:if="{{class51}}" class="td bg-cyan" bindtap="updata51">有课</view>
+			<view wx:if="{{!class51}}" class="td bg-olive light" bindtap="updata51">无课</view>
+		</view>
+		<view class="tr ">
+			<view class="td  bg-green light">2</view>
+			<view wx:if="{{class12}}" class="td bg-cyan" bindtap="updata12">有课</view>
+			<view wx:if="{{!class12}}" class="td bg-olive light" bindtap="updata12">无课</view>
+			<view wx:if="{{class22}}" class="td bg-cyan" bindtap="updata22">有课</view>
+			<view wx:if="{{!class22}}" class="td bg-olive light" bindtap="updata22">无课</view>
+			<view wx:if="{{class32}}" class="td bg-cyan" bindtap="updata32">有课</view>
+			<view wx:if="{{!class32}}" class="td bg-olive light" bindtap="updata32">无课</view>
+			<view wx:if="{{class42}}" class="td bg-cyan" bindtap="updata42">有课</view>
+			<view wx:if="{{!class42}}" class="td bg-olive light" bindtap="updata42">无课</view>
+			<view wx:if="{{class52}}" class="td bg-cyan" bindtap="updata52">有课</view>
+			<view wx:if="{{!class52}}" class="td bg-olive light" bindtap="updata52">无课</view>
+		</view>
+		<view class="tr ">
+			<view class="td  bg-green light">3</view>
+			<view wx:if="{{class13}}" class="td bg-cyan " bindtap="updata13">有课</view>
+			<view wx:if="{{!class13}}" class="td bg-olive light" bindtap="updata13">无课</view>
+			<view wx:if="{{class23}}" class="td bg-cyan" bindtap="updata23">有课</view>
+			<view wx:if="{{!class23}}" class="td bg-olive light" bindtap="updata23">无课</view>
+			<view wx:if="{{class33}}" class="td bg-cyan" bindtap="updata33">有课</view>
+			<view wx:if="{{!class33}}" class="td bg-olive light" bindtap="updata33">无课</view>
+			<view wx:if="{{class43}}" class="td bg-cyan" bindtap="updata43">有课</view>
+			<view wx:if="{{!class43}}" class="td bg-olive light" bindtap="updata43">无课</view>
+			<view wx:if="{{class53}}" class="td bg-cyan" bindtap="updata53">有课</view>
+			<view wx:if="{{!class53}}" class="td bg-olive light" bindtap="updata53">无课</view>
+		</view>
+		<view class="tr ">
+			<view class="td  bg-green light">4</view>
+			<view wx:if="{{class14}}" class="td bg-cyan" bindtap="updata14">有课</view>
+			<view wx:if="{{!class14}}" class="td bg-olive light" bindtap="updata14">无课</view>
+			<view wx:if="{{class24}}" class="td bg-cyan" bindtap="updata24">有课</view>
+			<view wx:if="{{!class24}}" class="td bg-olive light" bindtap="updata24">无课</view>
+			<view wx:if="{{class34}}" class="td bg-cyan" bindtap="updata34">有课</view>
+			<view wx:if="{{!class34}}" class="td bg-olive light" bindtap="updata34">无课</view>
+			<view wx:if="{{class44}}" class="td bg-cyan" bindtap="updata44">有课</view>
+			<view wx:if="{{!class44}}" class="td bg-olive light" bindtap="updata44">无课</view>
+			<view wx:if="{{class54}}" class="td bg-cyan" bindtap="updata54">有课</view>
+			<view wx:if="{{!class54}}" class="td bg-olive light" bindtap="updata54">无课</view>
+		</view>
+		<view class="tr ">
+			<view class="td  bg-green light">5</view>
+			<view wx:if="{{class15}}" class="td bg-cyan" bindtap="updata15">有课</view>
+			<view wx:if="{{!class15}}" class="td bg-olive light" bindtap="updata15">无课</view>
+			<view wx:if="{{class25}}" class="td bg-cyan" bindtap="updata25">有课</view>
+			<view wx:if="{{!class25}}" class="td bg-olive light" bindtap="updata25">无课</view>
+			<view wx:if="{{class35}}" class="td bg-cyan" bindtap="updata35">有课</view>
+			<view wx:if="{{!class35}}" class="td bg-olive light" bindtap="updata35">无课</view>
+			<view wx:if="{{class45}}" class="td bg-cyan" bindtap="updata45">有课</view>
+			<view wx:if="{{!class45}}" class="td bg-olive light" bindtap="updata45">无课</view>
+			<view wx:if="{{class55}}" class="td bg-cyan" bindtap="updata55">有课</view>
+			<view wx:if="{{!class55}}" class="td bg-olive light" bindtap="updata55">无课</view>
+		</view>
+	</view>
+
+	<view class="padding flex flex-direction bg-white margin-top">
+		<button form-type="submit" class="cu-btn bg-green margin-tb-sm lg">确认提交</button>
+	</view>
+
+</form>

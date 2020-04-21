@@ -1,14 +1,14 @@
 <!-- 轮播图开始 -->
 <view>
-	<swiper class="screen-swiper  square-dot " indicator-dots="true" circular="true" autoplay="true" interval="3000" duration="500">
-		<swiper-item>
+	<swiper class="screen-swiper   "  circular="true" autoplay="true" interval="3000" duration="500">
+		<!-- <swiper-item>
 			<image src="http://img1.imgtn.bdimg.com/it/u=3675415932,4054970339&fm=26&gp=0.jpg"></image>
 		</swiper-item>
 		<swiper-item>
 			<image src="http://img1.imgtn.bdimg.com/it/u=3857696996,2875137765&fm=26&gp=0.jpg"></image>
-		</swiper-item>
+		</swiper-item> -->
 		<swiper-item>
-			<image src="http://i1.hdslb.com/bfs/archive/61d0469db76742f810493ef0c1d85044ede256d7.jpg"></image>
+			<image src="https://7072-production-ue9j7-1301900827.tcb.qcloud.la/huibiao/huibiao-1.png?sign=06d0baa76773b1a1bb9b91ab26d50ce7&t=1587445666"></image>
 		</swiper-item>
 	</swiper>
 </view>

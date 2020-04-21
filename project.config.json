@@ -126,6 +126,41 @@
 					"pathName": "pages/profile/updataLog/updataLog",
 					"query": "id=jijianbu",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/wumei/wumei",
+					"pathName": "pages/wumei/wumei/wumei",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/class/class",
+					"pathName": "pages/wumei/class/class",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/getClassWeek/getClassWeek",
+					"pathName": "pages/wumei/getClassWeek/getClassWeek",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/getClassDetail/getClassDetail",
+					"pathName": "pages/wumei/getClassDetail/getClassDetail",
+					"query": "week=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/getClassWeek/getClassWeek",
+					"pathName": "pages/wumei/getClassWeek/getClassWeek",
+					"query": "week=1",
+					"scene": null
 				}
 			]
 		}
