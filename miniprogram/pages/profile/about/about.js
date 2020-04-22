@@ -12,7 +12,15 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        wx.stopPullDownRefresh({
+          complete: (res) => {},
+        })
+        wx.showLoading({
+          title: '加载中',
+        })
+        setTimeout(()=>{
+            wx.hideLoading();
+        },200)
     },
 
     /**
@@ -47,7 +55,7 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-
+        this.onLoad();
     },
 
     /**

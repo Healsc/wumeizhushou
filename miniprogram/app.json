@@ -5,6 +5,12 @@
         "pages/wumei/class/class",
         "pages/wumei/getClassWeek/getClassWeek",
         "pages/wumei/getClassDetail/getClassDetail",
+        "pages/wumei/showClassList/showClassList",
+        "pages/wumei/showClassDetail/showClassDetail",
+        "pages/wumei/dutyList/dutyList",
+        "pages/wumei/dutyDetail/dutyDetail",
+        "pages/wumei/activeList/activeList",
+        "pages/wumei/activeDetail/activeDetail",
 
         "pages/profile/profile/profile",
         "pages/profile/about/about",
@@ -19,7 +25,11 @@
         "pages/notice/noticeDetail/noticeDetail",
 
         "pages/admin/addNotice/addNotice",
-        "pages/admin/updataDepartment/updataDepartment"
+        "pages/admin/addDuty/addDuty",
+        "pages/admin/updataDepartment/updataDepartment",
+        "pages/admin/addActiveJuchang/addActiveJuchang",
+        "pages/admin/addActiveHDS/addActiveHDS",
+        "pages/admin/addActiveDahuo/addActiveDahuo"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",

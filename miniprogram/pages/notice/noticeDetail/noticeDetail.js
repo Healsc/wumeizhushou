@@ -74,7 +74,6 @@ Page({
         let that = this;
         that.setData({
             id: this.data.id,
-            content: ""
         })
         that.getNoticeDetail();
     },

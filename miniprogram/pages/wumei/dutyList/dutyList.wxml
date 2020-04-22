@@ -1,0 +1,15 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">值班信息</view>
+</cu-custom>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+	<block wx:for="{{dutyList}}" wx:key="index">
+		<view class="cu-item arrow" data-id="{{item._id}}" bindtap="goDutyDetail">
+			<view class="content" data-id="{{item._id}}" hover-class="none">
+				<text class="text-grey"   data-id="{{item._id}}">{{item._title}}</text>
+			</view>
+		</view>
+	</block>
+
+</view>

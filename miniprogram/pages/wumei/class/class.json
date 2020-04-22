@@ -2,6 +2,5 @@
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
   },
-  "navigationStyle": "custom",
-  "enablePullDownRefresh": true 
+  "navigationStyle": "custom"
 }

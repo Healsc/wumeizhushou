@@ -1,0 +1,7 @@
+/* pages/wumei/dutyDetail/dutyDetail.wxss */
+.duty {
+    margin: 40rpx 30rpx 30rpx 30rpx;
+    border-radius: 20rpx;
+    padding: 30rpx;
+    background-color: #ffffff;
+}

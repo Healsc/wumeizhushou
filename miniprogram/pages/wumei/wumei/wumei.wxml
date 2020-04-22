@@ -10,20 +10,17 @@
 					课表信息
 				</view>
 			</view>
-			<view class="cu-item bg-img shadow-blur" style="background-image:url(https://7072-production-ue9j7-1301900827.tcb.qcloud.la/images/bgimg002.png?sign=103d92937efb968dfbeb57db0f73b28b&t=1587432722)" bindtap='goZhibanWeek'>
+			<navigator url="/pages/wumei/dutyList/dutyList" class="cu-item bg-img shadow-blur" style="background-image:url(https://7072-production-ue9j7-1301900827.tcb.qcloud.la/images/bgimg002.png?sign=103d92937efb968dfbeb57db0f73b28b&t=1587432722)">
 				<view class="cardTitle">
 					值班信息
 				</view>
-			</view>
-			<view class="cu-item bg-img shadow-blur" style="background-image:url(https://7072-production-ue9j7-1301900827.tcb.qcloud.la/images/bgimg003.jpg?sign=8dde0a7d5aa0fd77bbb02d092c5d2b70&t=1587432759)" bindtap='goQiandao'>
+			</navigator>
+
+			<navigator url="/pages/wumei/activeList/activeList" class="cu-item bg-img shadow-blur" style="background-image:url(https://7072-production-ue9j7-1301900827.tcb.qcloud.la/images/bg_002.jpg?sign=0602d6825854d5e94be1d8318e2f21fd&t=1587431836)">
 				<view class="cardTitle">
 					活动信息
 				</view>
-			</view>
-			<view class="cu-item bg-img shadow-blur" style="background-image:url(https://7072-production-ue9j7-1301900827.tcb.qcloud.la/images/bg_002.jpg?sign=0602d6825854d5e94be1d8318e2f21fd&t=1587431836)" bindtap='goQiandao'>
-				<view class="cardTitle">
-					活动信息
-				</view>
-			</view>
+			</navigator>
+		
 		</view>
 	</scroll-view>

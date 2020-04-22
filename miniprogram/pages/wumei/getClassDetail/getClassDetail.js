@@ -157,8 +157,13 @@ Page({
                         wx.showModal({
                             title: '提示',
                             content: '您未进行舞美认证或正在认证中',
-                            cancelText: '否',
-                            confirmText: '是',
+
+                        }).then(res => {
+                            if (res.confirm) {
+                                wx.redirectTo({
+                                    url: '/pages/profile/wmIdentify/wmIdentify',
+                                })
+                            }
                         })
                     }
 

@@ -3,16 +3,14 @@
 	<view slot="content">课表收集</view>
 </cu-custom>
 
-<scroll-view scroll-y class="scrollPage">
 	<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
 		<block wx:for="{{weekList}}" wx:key="index">
-			<view class="cu-item arrow"   data-weekid="{{item}}">
-				<view class="content"    data-weekid="{{item}}" bindtap='goGetClass'  hover-class="none">
-					<text class="text-grey"   data-weekid="{{item}}">第{{item}}周课表收集</text>
+			<view class="cu-item arrow"   data-weekid="{{item._weekid}}">
+				<view class="content"    data-weekid="{{item._weekid}}" bindtap='goGetClass'  hover-class="none">
+					<text class="text-grey"   data-weekid="{{item._weekid}}">第{{item._weekid}}周课表收集</text>
 				</view>
 			</view>
 		</block>
 
 	</view>
 	<view class="cu-tabbar-height"></view>
-</scroll-view>

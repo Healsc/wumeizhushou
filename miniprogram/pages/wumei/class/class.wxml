@@ -2,20 +2,19 @@
 	<view slot="backText">返回</view>
 	<view slot="content">课表信息</view>
 </cu-custom>
-<scroll-view scroll-y class="scrollPage">
-	<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
 
-		<navigator class="cu-item arrow" url="/pages/wumei/getClassWeek/getClassWeek">
-			<view class="content" bindtap='goGetClass' hover-class="none">
-				<text class="text-grey">课表收集</text>
-			</view>
-		</navigator>
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
 
-		<view class="cu-item arrow">
-			<view class="content" bindtap='goGetClass' hover-class="none">
-				<text class="text-grey">课表信息</text>
-			</view>
+	<navigator class="cu-item arrow" url="/pages/wumei/getClassWeek/getClassWeek">
+		<view class="content" bindtap='goGetClass' hover-class="none">
+			<text class="text-grey">课表收集</text>
 		</view>
+	</navigator>
+
+	<view class="cu-item arrow">
+		<navigator class="content" url="/pages/wumei/showClassList/showClassList" hover-class="none">
+			<text class="text-grey">课表信息</text>
+		</navigator>
 	</view>
-	<view class="cu-tabbar-height"></view>
-</scroll-view>
+</view>
+<view class="cu-tabbar-height"></view>

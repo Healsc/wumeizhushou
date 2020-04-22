@@ -135,8 +135,8 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "pages/wumei/class/class",
+					"id": 14,
+					"name": "课表信息",
 					"pathName": "pages/wumei/class/class",
 					"query": "",
 					"scene": null
@@ -160,6 +160,90 @@
 					"name": "pages/wumei/getClassWeek/getClassWeek",
 					"pathName": "pages/wumei/getClassWeek/getClassWeek",
 					"query": "week=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/class/class",
+					"pathName": "pages/wumei/class/class",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/showClassList/showClassList",
+					"pathName": "pages/wumei/showClassList/showClassList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/showClassDetail/showClassDetail",
+					"pathName": "pages/wumei/showClassDetail/showClassDetail",
+					"query": "did=办公室&wid=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "值班信息",
+					"pathName": "pages/wumei/dutyList/dutyList",
+					"query": "did=办公室&wid=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加值班",
+					"pathName": "pages/admin/addDuty/addDuty",
+					"query": "did=办公室&wid=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/dutyDetail/dutyDetail",
+					"pathName": "pages/wumei/dutyDetail/dutyDetail",
+					"query": "id= 1f02f43d5ea0247e0008be3b42af9e80",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/dutyDetail/dutyDetail",
+					"pathName": "pages/wumei/dutyDetail/dutyDetail",
+					"query": "id=efa5bb055ea022e300099db116a48165",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动信息",
+					"pathName": "pages/wumei/activeList/activeList",
+					"query": "id=efa5bb055ea022e300099db116a48165",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/addActiveJuchang/addActiveJuchang",
+					"pathName": "pages/admin/addActiveJuchang/addActiveJuchang",
+					"query": "id=efa5bb055ea022e300099db116a48165",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/addActiveHDS/addActiveHDS",
+					"pathName": "pages/admin/addActiveHDS/addActiveHDS",
+					"query": "id=efa5bb055ea022e300099db116a48165",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/addActiveDahuo/addActiveDahuo",
+					"pathName": "pages/admin/addActiveDahuo/addActiveDahuo",
+					"query": "id=efa5bb055ea022e300099db116a48165",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/activeList/activeList",
+					"pathName": "pages/wumei/activeList/activeList",
+					"query": "id=efa5bb055ea022e300099db116a48165",
 					"scene": null
 				}
 			]

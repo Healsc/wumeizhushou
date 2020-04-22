@@ -1,0 +1,8 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">{{dutyDetail._title}}</view>
+</cu-custom>
+<view class="duty ">
+	<!-- <htmltowxml text="{{content}}" /> -->
+	<wxparser rich-text="{{dutyDetail._content}}" />
+</view>

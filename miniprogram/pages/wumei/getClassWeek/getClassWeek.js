@@ -6,9 +6,7 @@ Page({
      */
     data: {
         openID:"",
-        weekList:[
-            1,2,3
-        ]
+        weekList:""
     },
     getOpenID(){
         wx.cloud.callFunction({
@@ -18,9 +16,17 @@ Page({
                 openID:res.result.openid
             })
         })
-    },  
+    }, 
+    getWeekList(){
+        wx.cloud.callFunction({
+            name:'getCLassWeekList'
+        }).then(res=>{
+            this.setData({
+                weekList:res.result.data
+            })
+        })
+    }, 
     goGetClass(e){
-       
         const db = wx.cloud.database();
         db.collection('class-week-' + e.target.dataset.weekid).where({
             _openid: this.data.openID
@@ -42,6 +48,7 @@ Page({
      */
     onLoad: function (options) {
         this.getOpenID();
+        this.getWeekList();
     },
 
     /**
