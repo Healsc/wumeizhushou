@@ -1,0 +1,28 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">活动室信息</view>
+</cu-custom>
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+
+	<view class="cu-item arrow" bindtap="goDutyDetail">
+		<view class="content" hover-class="none">
+			<text class="text-grey"  >活动室概况信息</text>
+		</view>
+	</view>
+	<view class="cu-item arrow" bindtap="goDutyDetail">
+		<view class="content" hover-class="none">
+			<text class="text-grey"  >活动室借用信息</text>
+		</view>
+	</view>
+	<navigator url="/pages/wumei/ApplyRoom/ApplyRoom" class="cu-item arrow" bindtap="goDutyDetail">
+		<view class="content" hover-class="none">
+			<text class="text-grey"  >活动室申请</text>
+		</view>
+	</navigator>
+	<view class="cu-item arrow" bindtap="goDutyDetail">
+		<view class="content" hover-class="none">
+			<text class="text-grey">我的申请</text>
+		</view>
+	</view>
+
+</view>

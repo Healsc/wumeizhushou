@@ -21,9 +21,15 @@ Page({
         isWM: false
     },
     getWeekList() {
+        wx.showLoading({
+            title: '加载中',
+        })
         wx.cloud.callFunction({
             name: 'getShowClassWeek'
         }).then(res => {
+            wx.hideLoading({
+                complete: (res) => {},
+            })
             this.setData({
                 weekList: res.result.data
             })
@@ -38,7 +44,7 @@ Page({
                 openid: res.result.openid
             })
             this.isWM();
-            console.log(res.result.openid)
+
         });
     },
     isWM() {
@@ -46,9 +52,12 @@ Page({
         db.collection('wumeiNumber').where({
             _openid: this.data.openid
         }).get().then(res => {
-            this.setData({
-                isWM: res.data[0]._isWM
-            })
+            if (res.data.length) {
+                this.setData({
+                    isWM: res.data[0]._isWM
+                })
+            }
+
         })
     },
     showModal(e) {
@@ -73,15 +82,15 @@ Page({
             wx.showModal({
                 title: '提示',
                 content: '您未进行舞美认证或正在认证中',
-                
-            }).then(res=>{
-                if(res.confirm){
+
+            }).then(res => {
+                if (res.confirm) {
                     wx.redirectTo({
                         url: '/pages/profile/wmIdentify/wmIdentify',
-                      })
+                    })
                 }
             })
-          
+
         }
 
     },

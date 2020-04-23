@@ -1,0 +1,62 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">申请活动室</view>
+</cu-custom>
+
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+	<view class="cu-form-group margin-top ">
+		<view class="title">活动名称</view>
+		<input type='text' name="name" placeholder="请填写" placeholder-class="text-right"></input>
+	</view>
+	
+	<view class="cu-form-group ">
+		<view class="title">活动内容</view>
+		<input type="numtextber" name="academy" placeholder="请填写" placeholder-class="text-right"></input>
+	</view>
+	<view class="cu-form-group ">
+		<view class="title">活动负责人</view>
+		<input type="number" name="phone" placeholder="请填写" placeholder-class="text-right"></input>
+	</view>
+	<view class="cu-form-group ">
+		<view class="title">联系方式</view>
+		<input type="number" name="phone" placeholder="11位手机号" placeholder-class="text-right"></input>
+	</view>
+
+	<view class="cu-form-group ">
+		<view class="title">教室选择</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{rommPicker}}">
+			<view class="picker">
+				{{index?rommPicker[index]:'请选择'}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">日期选择</view>
+		<picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">开始时间</view>
+		<picker mode="time" value="{{startTime}}" start="08:10" end="21:00" bindchange="startTimeChange">
+			<view class="picker">
+				{{startTime}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">结束时间</view>
+		<picker mode="time" value="{{endTime}}" start="08:10" end="21:00" bindchange="endTimeChange">
+			<view class="picker">
+				{{endTime}}
+			</view>
+		</picker>
+	</view>
+
+	<view class="padding flex flex-direction bg-white margin-top">
+		<button form-type="submit" class="cu-btn bg-green margin-tb-sm lg">确认提交</button>
+	</view>
+</form>

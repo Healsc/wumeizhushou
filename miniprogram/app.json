@@ -11,7 +11,11 @@
         "pages/wumei/dutyDetail/dutyDetail",
         "pages/wumei/activeList/activeList",
         "pages/wumei/activeDetail/activeDetail",
+        "pages/wumei/activityRoom/activityRoom",
+        "pages/wumei/ApplyRoom/ApplyRoom",
 
+
+        
         "pages/profile/profile/profile",
         "pages/profile/about/about",
         "pages/profile/wmIdentify/wmIdentify",

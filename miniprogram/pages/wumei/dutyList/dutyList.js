@@ -11,7 +11,7 @@ Page({
     },
     getDutyList() {
         wx.showLoading({
-          title: '加载中',
+            title: '加载中',
         });
         wx.stopPullDownRefresh();
         wx.cloud.callFunction({
@@ -40,9 +40,12 @@ Page({
         db.collection('wumeiNumber').where({
             _openid: this.data.openid
         }).get().then(res => {
-            this.setData({
-                isWM: res.data[0]._isWM
-            })
+            if (res.data.length) {
+                this.setData({
+                    isWM: res.data[0]._isWM
+                })
+            }
+
         })
     },
     goDutyDetail(e) {
@@ -52,8 +55,8 @@ Page({
             })
         } else {
             wx.showModal({
-              title: '提示',
-              content:"未进行舞美认证或认证中"
+                title: '提示',
+                content: "未进行舞美认证或认证中"
             })
         }
 

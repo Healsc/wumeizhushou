@@ -19,11 +19,37 @@ Page({
         }],
         activeid: "",
         activename: "",
-        activeListInfo: []
+        activeListInfo: [],
+        isWM: false,
+        openid: ""
+    },
+    getOpenid() {
+        wx.cloud.callFunction({
+            name: 'login'
+        }).then(res => {
+            this.setData({
+                openid: res.result.openid
+
+            })
+            this.isWM();
+        })
+
+    },
+    isWM() {
+        const db = wx.cloud.database();
+        db.collection('wumeiNumber').where({
+            _openid: this.data.openid
+        }).get().then(res => {
+            if (res.data.length) {
+                this.setData({
+                    isWM: res.data[0]._isWM
+                })
+            }
+        })
     },
     /* active-juchang */
     showModal(e) {
-       
+
         this.setData({
             activeid: e.target.dataset.id,
             activename: e.target.dataset.name,
@@ -52,21 +78,38 @@ Page({
         })
     },
     goActiveDetail(e) {
-        wx.navigateTo({
-          url: '/pages/wumei/activeDetail/activeDetail?id='+e.target.dataset.id+'&activeid='+this.data.activeid,
-        })
-      /*   console.log(this.data.activeid)
-        console.log(e.target.dataset.id) */
+        if (this.data.isWM) {
+            wx.navigateTo({
+                url: '/pages/wumei/activeDetail/activeDetail?id=' + e.target.dataset.id + '&activeid=' + this.data.activeid,
+            })
+        } else {
+            wx.showModal({
+                title: '提示',
+                content: '未进行舞美认证或认证中',
+                success(res) {
+                    if (res.confirm) {
+                        wx.navigateTo({
+                            url: '/pages/profile/wmIdentify/wmIdentify',
+                        })
+
+                    }
+                }
+            })
+        }
+
+        /*   console.log(this.data.activeid)
+          console.log(e.target.dataset.id) */
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        this.getOpenid();
         setTimeout(() => {
             wx.stopPullDownRefresh({
                 complete: (res) => {},
             })
-        }, 2000)
+        }, 1500)
     },
 
     /**

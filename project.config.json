@@ -245,6 +245,26 @@
 					"pathName": "pages/wumei/activeList/activeList",
 					"query": "id=efa5bb055ea022e300099db116a48165",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/activeList/activeList",
+					"pathName": "pages/wumei/activeList/activeList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动室信息",
+					"pathName": "pages/wumei/activityRoom/activityRoom",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动室申请",
+					"pathName": "pages/wumei/ApplyRoom/ApplyRoom",
+					"scene": null
 				}
 			]
 		}

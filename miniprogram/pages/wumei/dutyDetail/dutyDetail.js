@@ -20,13 +20,18 @@ Page({
         this.getDutyDetail();
     },
     getDutyDetail() {
-       
+        wx.showLoading({
+          title: '加载中',
+        })
         wx.cloud.callFunction({
             name: 'getDutyDetail',
             data: {
                 id: this.data.id
             },
             success: (res) => {
+                wx.hideLoading({
+                  complete: (res) => {},
+                })
                 this.setData({
                     dutyDetail: res.result.data
                 })

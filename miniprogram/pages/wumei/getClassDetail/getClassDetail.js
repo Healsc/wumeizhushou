@@ -66,10 +66,13 @@ Page({
         }).get({
             success: (res) => {
                 // console.log(res)
-                this.setData({
-                    wumeiInfo: res.data[0],
-                    isWM: res.data[0]._isWM
-                })
+                if (res.data.length) {
+                    this.setData({
+                        wumeiInfo: res.data[0],
+                        isWM: res.data[0]._isWM
+                    })
+                }
+
             },
             fail: (err) => {
                 wx.showModal({
