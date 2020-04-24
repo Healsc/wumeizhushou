@@ -7,20 +7,20 @@
 <form bindsubmit="formSubmit" bindreset="formReset">
 	<view class="cu-form-group margin-top ">
 		<view class="title">活动名称</view>
-		<input type='text' name="name" placeholder="请填写" placeholder-class="text-right"></input>
+		<input type='text' name="title" placeholder="请填写" placeholder-class="text-left"></input>
 	</view>
 	
 	<view class="cu-form-group ">
 		<view class="title">活动内容</view>
-		<input type="numtextber" name="academy" placeholder="请填写" placeholder-class="text-right"></input>
+		<input type="numtextber" name="content" placeholder="请填写" placeholder-class="text-left"></input>
 	</view>
 	<view class="cu-form-group ">
 		<view class="title">活动负责人</view>
-		<input type="number" name="phone" placeholder="请填写" placeholder-class="text-right"></input>
+		<input type="text" name="name" placeholder="请填写" placeholder-class="text-left"></input>
 	</view>
 	<view class="cu-form-group ">
 		<view class="title">联系方式</view>
-		<input type="number" name="phone" placeholder="11位手机号" placeholder-class="text-right"></input>
+		<input type="number" name="phone" placeholder="11位手机号" placeholder-class="text-left"></input>
 	</view>
 
 	<view class="cu-form-group ">

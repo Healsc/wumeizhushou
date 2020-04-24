@@ -259,9 +259,10 @@ Page({
 
                             })
                         }).catch(err => {
-                            wx.showModal({
-                                title: '提示',
-                                content: '提交失败',
+                            wx.showToast({
+                                title: '提交成功',
+                                icon: 'success',
+                                duration: 3000
                             })
                         });
 

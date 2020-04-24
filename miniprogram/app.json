@@ -21,6 +21,8 @@
         "pages/profile/wmIdentify/wmIdentify",
         "pages/profile/updataLog/updataLog",
         "pages/profile/wmNumberInfo/wmNumberInfo",
+        "pages/profile/zzSTIdentify/zzSTIdentify",
+        "pages/profile/zzSTNumberInfo/zzSTNumberInfo",
 
 
         "pages/departmentInfo/departmentInfo",

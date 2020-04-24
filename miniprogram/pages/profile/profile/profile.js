@@ -24,25 +24,47 @@ Page({
 
         })
     },
-  /* 舞美认证 */
+    /* 舞美认证 */
     goWNIdentify() {
         const db = wx.cloud.database();
         db.collection('wumeiNumber').where({
             _openid: this.data.openid
         }).get().then((res) => {
-           if(res.data.length){
-            wx.navigateTo({
-                url: '/pages/profile/wmNumberInfo/wmNumberInfo',
-            })
-           }else{
-            wx.navigateTo({
-                url: '/pages/profile/wmIdentify/wmIdentify',
-            })
-           }
+            if (res.data.length) {
+                wx.navigateTo({
+                    url: '/pages/profile/wmNumberInfo/wmNumberInfo',
+                })
+            } else {
+                wx.navigateTo({
+                    url: '/pages/profile/wmIdentify/wmIdentify',
+                })
+            }
         })
     },
-
-/* 分享 */
+    /*  "pages/profile/zzSTIdentify/zzSTIdentify",
+        "pages/profile/zzSTNumberInfo/zzSTNumberInfo", */
+    getZzStNumberInfo() {
+        const db = wx.cloud.database();
+        db.collection('zzSTNumber').where({
+            _openid: this.data.openid
+        }).get().then(res => {
+            if (res.data.length) {
+                wx.navigateTo({
+                    url: '/pages/profile/zzSTNumberInfo/zzSTNumberInfo',
+                })
+            } else {
+                wx.navigateTo({
+                    url: '/pages/profile/zzSTIdentify/zzSTIdentify',
+                })
+            }
+        })
+    },
+    gozzSTIdentify() {
+        wx.navigateTo({
+            url: '/pages/profile/zzSTIdentify/zzSTIdentify',
+        })
+    },
+    /* 分享 */
     onShareAppMessage: function (res) {
         return {
             title: '东农舞美助手',

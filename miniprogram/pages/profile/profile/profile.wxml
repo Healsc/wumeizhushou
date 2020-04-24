@@ -44,11 +44,13 @@
 			<text class="cuIcon-creativefill text-orange"></text>
 			<text class="text-grey">舞美认证</text>
 		</view>
-
-
-
 	</view>
-
+	<view class="cu-item arrow">
+		<view class="content" bindtap="getZzStNumberInfo" hover-class="none">
+			<text class="cuIcon-light text-orange"></text>
+			<text class="text-grey">组织/社团认证</text>
+		</view>
+	</view>
 	<view class="cu-item arrow">
 		<button class="cu-btn content" open-type="share" hover-class="none">
 			<text class="cuIcon-share text-green"></text>

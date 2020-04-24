@@ -1,0 +1,32 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">组织/社团认证信息</view>
+</cu-custom>
+
+
+<image wx:if="{{isPass}}" src='/images/renzhengchenggong.png' class='show-img'></image>
+<image wx:if="{{!isPass}}" src='/images/shenhezhong.png' class='show-img'></image>
+<view class='naxinInfo'>
+	<view class="cu-form-group margin-top pad-left">
+		<view class="title">姓名</view>
+		<text class='text-center pad-left-cont'>{{numberInfo._name}}</text>
+	</view>
+
+	<view class="cu-form-group pad-left">
+		<view class="title">部门</view>
+		<text class='text-center pad-left-cont'>{{numberInfo._department}}</text>
+	</view>
+	<view class="cu-form-group pad-left">
+		<view class="title">职务</view>
+		<text class='text-center pad-left-cont'>{{numberInfo._position}}</text>
+	</view>
+
+	<view class="cu-form-group pad-left">
+		<view class="title">学号</view>
+		<text class='text-center pad-left-cont'>{{numberInfo._studentNumber}}</text>
+	</view>
+	<view class="cu-form-group pad-left">
+		<view class="title">学号</view>
+		<text class='text-center pad-left-cont'>{{numberInfo._phone}}</text>
+	</view>
+</view>

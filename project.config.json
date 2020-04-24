@@ -264,6 +264,27 @@
 					"id": -1,
 					"name": "活动室申请",
 					"pathName": "pages/wumei/ApplyRoom/ApplyRoom",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请活动室",
+					"pathName": "pages/wumei/ApplyRoom/ApplyRoom",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "组织社团认证",
+					"pathName": "pages/profile/zzSTIdentify/zzSTIdentify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/zzSTNumberInfo/zzSTNumberInfo",
+					"pathName": "pages/profile/zzSTNumberInfo/zzSTNumberInfo",
 					"scene": null
 				}
 			]
