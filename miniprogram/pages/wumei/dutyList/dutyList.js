@@ -46,42 +46,21 @@ Page({
                     wmInfo: res.data[0],
                     isWM: res.data[0]._isWM
                 })
-                console.log(this.data.wmInfo._isWM == false)
-                console.log(this.data.wmInfo._isWM)
+
             }
 
         })
     },
     goDutyDetail(e) {
-       
         this.isWM();
         if (this.data.isWM) {
             wx.navigateTo({
                 url: '/pages/wumei/dutyDetail/dutyDetail?id=' + e.target.dataset.id,
             })
-        } else if (this.data.wmInfo._isWM == false) {
-            wx.showModal({
-                title: '提示',
-                content: "舞美认证中",
-                success: res => {
-                    if (res.confirm) {
-                        wx.navigateTo({
-                            url: '/pages/profile/wmNumberInfo/wmNumberInfo',
-                        })
-                    }
-                }
-            })
         } else {
             wx.showModal({
-                title: '你不是舞美成员',
-                content: "请进行舞美认证",
-                success: res => {
-                    if (res.confirm) {
-                        wx.navigateTo({
-                            url: '/pages/profile/wmIdentify/wmIdentify',
-                        })
-                    }
-                }
+                title: '未进行舞美认证或认证中',
+                content: "请前往 我的->舞美认证",
             })
         }
 

@@ -33,7 +33,7 @@
 	</view>
 	<view class="cu-form-group">
 		<view class="title">日期选择</view>
-		<picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
+		<picker mode="date" value="{{date}}" start="2020-04-20" end="2020-07-01" bindchange="DateChange">
 			<view class="picker">
 				{{date}}
 			</view>

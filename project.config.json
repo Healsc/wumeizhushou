@@ -285,6 +285,13 @@
 					"id": -1,
 					"name": "pages/profile/zzSTNumberInfo/zzSTNumberInfo",
 					"pathName": "pages/profile/zzSTNumberInfo/zzSTNumberInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的申请",
+					"pathName": "pages/wumei/myApplyRoom/myApplyRoom",
 					"scene": null
 				}
 			]

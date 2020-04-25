@@ -40,7 +40,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log(options)
+      
         this.setData({
             departmentid: options.did,
             weekid: options.wid
@@ -48,6 +48,9 @@ Page({
         this.getClass();
     },
     getClass() {
+        wx.showLoading({
+          title: '加载中',
+        })
         wx.cloud.callFunction({
             name: 'getClassDetail',
             data: {
@@ -55,12 +58,13 @@ Page({
                 weekid: this.data.weekid
             }
         }).then(res => {
+            wx.hideLoading({
+              complete: (res) => {},
+            })
             this.setData({
                 classInfo: res.result.data
             })
             this.setList();
-            console.log(res)
-            console.log(res.result.data)
         })
     },
     setList: function () {

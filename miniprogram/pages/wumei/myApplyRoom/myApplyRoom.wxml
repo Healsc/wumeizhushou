@@ -1,0 +1,60 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">我的申请</view>
+</cu-custom>
+
+<scroll-view scroll-x class="bg-white nav">
+	<view class="flex text-center">
+		<view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{navList}}" wx:key="index"  data-aid="{{item.id}}" bindtap="tabSelect" data-id="{{index}}">
+			{{item.name}}
+		</view>
+	</view>
+</scroll-view>
+<view style="margin-bottom:30rpx">
+	<view class="cu-form-group margin-top pad-left">
+		<view class="title">申请数量</view>
+		<text class='text-center pad-left-cont'>{{applyCount}}</text>
+	</view>
+	<block wx:for="{{myApplyList}}" wx:key="index">
+		<view class="cu-form-group margin-top pad-left">
+			<view class="title">活动名</view>
+			<text class='text-center pad-left-cont'>{{item._active_name}}</text>
+		</view>
+		<view class="cu-form-group pad-left">
+			<view class="title">活动内容</view>
+			<text class='text-center pad-left-cont'>{{item._active_content}}</text>
+		</view>
+		<view class="cu-form-group pad-left">
+			<view class="title">申请教室</view>
+			<text class='text-center pad-left-cont'>{{item._active_room}}</text>
+		</view>
+
+		<view class="cu-form-group pad-left">
+			<view class="title">使用时间</view>
+			<text class='text-center pad-left-cont'>{{item._active_date}} \r\t \r\t {{item._active_start}}-{{item._active_end}}</text>
+		</view>
+
+		<view class="cu-form-group pad-left">
+			<view class="title">活动负责人</view>
+			<text class='text-center pad-left-cont'>{{item._person_name}}</text>
+		</view>
+		<view class="cu-form-group pad-left">
+			<view class="title">负责人联系方式</view>
+			<text class='text-center pad-left-cont'>{{item._person_phone}}</text>
+		</view>
+		<view class="cu-form-group pad-left">
+			<view class="title">申请时间</view>
+			<text class='text-center pad-left-cont'>{{item._post_show_date}}</text>
+		</view>
+		<view class="cu-form-group pad-left">
+			<view class="title">当前状态</view>
+			<text class='text-center pad-left-cont' style="color:red" wx:if="{{item._isPass == 0}}">申请失败</text>
+			<text class='text-center pad-left-cont' wx:if="{{item._isPass == 1}}">申请中</text>
+			<text class='text-center pad-left-cont' style="color:green" wx:if="{{item._isPass == 2}}">申请成功</text>
+		</view>
+		<view class="cu-form-group pad-left" wx:if="{{item._isPass == 0}}">
+			<view class="title">备注</view>
+			<text class='text-center pad-left-cont' style="color:red" >申请时间冲突或活动内容不符合申请条件</text>
+		</view>
+	</block>
+</view>
