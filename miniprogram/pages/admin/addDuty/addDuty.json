@@ -3,7 +3,7 @@
   "disableScroll": true,
 
   "usingComponents": {
-    "htmltowxml": "plugin://htmltowxml/view"
+   
   }
 
 }

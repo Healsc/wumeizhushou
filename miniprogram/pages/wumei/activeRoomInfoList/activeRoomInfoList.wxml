@@ -1,0 +1,14 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">活动室概况信息</view>
+</cu-custom>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+	<block wx:for="{{roomList}}" wx:key="index">
+		<view class="cu-item arrow" data-id="{{item._roomid}}" bindtap="goActiveroomDetail">
+			<view class="content" data-id="{{item._roomid}}" hover-class="none">
+				<text class="text-grey"   data-id="{{item._roomid}}">{{item._title}}</text>
+			</view>
+		</view>
+	</block>
+</view>

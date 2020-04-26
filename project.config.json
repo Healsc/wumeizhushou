@@ -292,6 +292,42 @@
 					"id": -1,
 					"name": "我的申请",
 					"pathName": "pages/wumei/myApplyRoom/myApplyRoom",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/myApplyRoom/myApplyRoom",
+					"pathName": "pages/wumei/myApplyRoom/myApplyRoom",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/departmentInfo/departmentInfo",
+					"pathName": "pages/departmentInfo/departmentInfo",
+					"query": "id=bangongshi",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/activeRoomInfoList/activeRoomInfoList",
+					"pathName": "pages/wumei/activeRoomInfoList/activeRoomInfoList",
+					"query": "id=bangongshi",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/updataActiveRoomIntroduce/updataActiveRoomIntroduce",
+					"pathName": "pages/admin/updataActiveRoomIntroduce/updataActiveRoomIntroduce",
+					"query": "id=bangongshi",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动室信息列表",
+					"pathName": "pages/wumei/activeRoomInfoList/activeRoomInfoList",
+					"query": "id=bangongshi",
 					"scene": null
 				}
 			]

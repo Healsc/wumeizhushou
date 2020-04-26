@@ -1,14 +1,13 @@
-// pages/departmentInfo/departmentInfo.js
-const db = wx.cloud.database();
+// pages/wumei/activeRoomInfoDetail/activeRoomInfoDetail.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        content:"",
-        id: "",
-        department:""
+        roomid: "",
+        detail:{}
+        
     },
 
     /**
@@ -16,25 +15,22 @@ Page({
      */
     onLoad: function (options) {
         this.setData({
-            id: options.id
+            roomid: options.roomid
         })
-        this.getDepartmentInfo();
+        this.getDetail();
+       
     },
-    getDepartmentInfo() {
-        wx.showLoading({
-          title: '加载中',
-        })
-        db.collection('department').doc(this.data.id).get().then(res=>{
-            wx.stopPullDownRefresh();
-            wx.hideLoading();
-            console.log(res)
+    getDetail(){
+        const db = wx.cloud.database();
+        db.collection('activeroom-introduce').where({
+            _roomid:this.data.roomid
+        }).get().then(res=>{
             this.setData({
-                department:res.data,
-                content:res.data._content
+                detail:res.data[0]
             })
+          
         })
     },
-  
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -67,15 +63,14 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-        let that = this;
-        that.getDepartmentInfo();
+
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-        
+
     },
 
     /**

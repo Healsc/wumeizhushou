@@ -2,7 +2,9 @@
 	<view slot="backText">返回</view>
 	<view slot="content">{{department._name}}</view>
 </cu-custom>
-<view class="detail">  
+<view class="detail">
 	<!-- <htmltowxml text="{{content}}" /> -->
 	<wxparser rich-text="{{content}}" />
+	<!-- rich-text.wxml -->
+	
 </view>

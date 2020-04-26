@@ -4,16 +4,16 @@
 </cu-custom>
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
 
-	<view class="cu-item arrow" bindtap="goDutyDetail">
+	<navigator url="/pages/wumei/activeRoomInfoList/activeRoomInfoList" class="cu-item arrow" bindtap="goDutyDetail">
 		<view class="content" hover-class="none">
 			<text class="text-grey"  >活动室概况信息</text>
 		</view>
-	</view>
-	<view class="cu-item arrow" bindtap="goDutyDetail">
+	</navigator>
+	<navigator url="/pages/wumei/applyedRoom/applyedRoom" class="cu-item arrow" bindtap="goDutyDetail">
 		<view class="content" hover-class="none">
 			<text class="text-grey"  >活动室借用信息</text>
 		</view>
-	</view>
+	</navigator>
 	<navigator url="/pages/wumei/ApplyRoom/ApplyRoom" class="cu-item arrow" bindtap="goDutyDetail">
 		<view class="content" hover-class="none">
 			<text class="text-grey"  >活动室申请</text>
