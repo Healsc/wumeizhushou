@@ -2,3 +2,34 @@
 	<view slot="backText">返回</view>
 	<view slot="content">活动室借用信息</view>
 </cu-custom>
+
+<scroll-view scroll-x class="bg-white nav" scroll-with-animation scroll-left="{{scrollLeft}}">
+	<view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{roomList}}" wx:key="index" bindtap="tabSelect" data-rid="{{item._roomid}}" data-id="{{index}}">
+		{{item._roomid}}
+	</view>
+</scroll-view>
+<view class="cu-form-group" style="margin-top:2rpx">
+	<view class="title">日期选择</view>
+	<picker mode="date" value="{{date}}" start="2020-04-20" end="2020-07-01" bindchange="DateChange">
+		<view class="picker">
+			{{date}}
+		</view>
+	</picker>
+</view>
+
+<view >
+	<block wx:for="{{activeroomList}}" wx:key="index">
+		<view class="part">
+			<view>
+				活动组织：{{item._active_department}}
+			</view>
+			<view>
+			</view>
+			活动内容：{{item._active_name}}
+			<view>
+				活动时间：{{item._active_start}}-{{item._active_end}}
+			</view>
+		</view>
+
+	</block>
+</view>

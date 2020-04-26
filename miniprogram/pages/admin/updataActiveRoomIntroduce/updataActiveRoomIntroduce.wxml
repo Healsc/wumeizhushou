@@ -22,8 +22,12 @@
 <view class="content">
 	<form>
 		<view class="cu-form-group margin-top">
-			<view class="title">标题</view>
-			<input name="title" bind:input="getTitle" placeholder="例:第一周"></input>
+			<view class="title">活动室</view>
+			<input name="title" bind:input="getTitle" placeholder="例:音乐厅101"></input>
+		</view>
+		<view class="cu-form-group ">
+			<view class="title">唯一识别</view>
+			<input name="time" bind:input="getTime" placeholder="必须按要求。例:101"></input>
 		</view>
 		<button class="bg-green" bindtap="clickLogText">发布</button>
 	</form>

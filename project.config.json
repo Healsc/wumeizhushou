@@ -329,6 +329,34 @@
 					"pathName": "pages/wumei/activeRoomInfoList/activeRoomInfoList",
 					"query": "id=bangongshi",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动室借用信息",
+					"pathName": "pages/wumei/applyedRoom/applyedRoom",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "舞美认证信息",
+					"pathName": "pages/profile/wmNumberInfo/wmNumberInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "管理端首页",
+					"pathName": "pages/admin/admin/admin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "管理端列表",
+					"pathName": "pages/admin/admin/admin",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

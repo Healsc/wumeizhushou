@@ -107,6 +107,7 @@ Page({
                                     _active_content: e.detail.value.content,
                                     _person_name: e.detail.value.name,
                                     _person_phone: e.detail.value.phone,
+                                    _active_department:this.data.applyNumber._department,
                                     _active_room: this.data.rommPicker[this.data.index],
                                     _active_date: this.data.date,
                                     _active_start: this.data.startTime,

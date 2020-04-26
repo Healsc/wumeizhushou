@@ -22,8 +22,8 @@
 <view class="content">
 	<form>
 		<view class="cu-form-group margin-top">
-			<view class="title">标题</view>
-			<input name="title" bind:input="getTitle" placeholder="标题"></input>
+			<view class="title">大活</view>
+			<input name="title" bind:input="getTitle" placeholder="例:第一周"></input>
 		</view>
 		
 		<button class="bg-green" bindtap="clickLogText">发布</button>

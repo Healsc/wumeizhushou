@@ -176,6 +176,7 @@ Page({
           data: {
             _createTime: new Date(),
             _title: that.data.title,
+            _roomid:this.data.time,
             _content: res.html
           }
         }).then(res => {

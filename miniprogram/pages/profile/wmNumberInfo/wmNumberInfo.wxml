@@ -35,5 +35,15 @@
 		<view class="title">学号</view>
 		<text class='text-center pad-left-cont'>{{wumeiNumberInfo._studentNumber}}</text>
 	</view>
+	<navigator  url="/pages/admin/admin/admin" wx:if="{{isAdmin}}" class="cu-form-group pad-left">
+		<view class="title">管理</view>
+		<text class='text-center pad-left-cont'>欢迎你</text>
+	</navigator>
 </view>
-<button class="admin-btn" wx:if="{{isAdmin}}" bindtap="goToAdmin">Admin</button>
+<!-- <view class="cu-list menu   margin-bottom-xl shadow-lg radius" style='margin-top:1rpx'>
+	<view wx:if="{{isAdmin}}" class="cu-item arrow">
+		<navigator url="/pages/admin/admin/admin" class="content" hover-class="none">
+			<text class="text-grey">管理</text>
+		</navigator>
+	</view>
+</view> -->

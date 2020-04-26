@@ -50,7 +50,7 @@ Page({
             this.setData({
                 applyCount: res.total
             })
-            console.log(res)
+           
         }).catch(err => {
             console.error(err)
         })

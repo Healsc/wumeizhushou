@@ -1,1 +1,17 @@
-/* pages/wumei/applyedRoom/applyedRoom.wxss */
+activeroom{
+    border-bottom: 1px solid red;
+}
+.part {
+    padding: 20rpx;
+    margin: 20rpx 30rpx;
+    border-bottom: 1px solid #ddd;
+    border-radius: 20rpx;
+    background-color: #ffffff;
+}
+
+/* 
+      margin: 40rpx 30rpx;
+    border-radius: 20rpx;
+    padding: 30rpx;
+    background-color: #ffffff;
+*/

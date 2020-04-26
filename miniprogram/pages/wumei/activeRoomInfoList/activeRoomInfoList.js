@@ -59,7 +59,7 @@ Page({
     },
     getList(){
         const db=wx.cloud.database();
-        db.collection('activeroom-introduce').orderBy('roomid','asc').get().then(res=>{
+        db.collection('active-room-introduce').orderBy('roomid','asc').get().then(res=>{
             console.log(res)
             this.setData({
                 roomList:res.data

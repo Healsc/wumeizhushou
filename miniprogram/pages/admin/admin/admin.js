@@ -1,36 +1,20 @@
-// pages/wumei/activeRoomInfoDetail/activeRoomInfoDetail.js
+// pages/admin/admin/admin.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        roomid: "",
-        detail:{}
-        
+
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.setData({
-            roomid: options.roomid
-        })
-        this.getDetail();
-       
+
     },
-    getDetail(){
-        const db = wx.cloud.database();
-        db.collection('active-room-introduce').where({
-            _roomid:this.data.roomid
-        }).get().then(res=>{
-            this.setData({
-                detail:res.data[0]
-            })
-          
-        })
-    },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

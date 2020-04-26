@@ -23,7 +23,7 @@ Page({
                 that.setData({
                     openid: openid
                 })
-                console.log(this.data.openid)
+               
             }
         })
     },
