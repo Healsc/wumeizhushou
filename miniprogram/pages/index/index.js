@@ -51,6 +51,9 @@ Page({
     this.getNoticeList()
   },
   getNoticeList() {
+    wx.showLoading({
+      title: '加载中',
+    })
     wx.cloud.callFunction({
       name: 'getNoticeList',
       data: {
@@ -58,6 +61,9 @@ Page({
         limit: 6
       }
     }).then((res) => {
+      wx.hideLoading({
+        complete: (res) => {},
+      })
       this.setData({
         noticeList: res.result.data
       })

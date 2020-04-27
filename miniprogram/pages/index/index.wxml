@@ -1,14 +1,14 @@
 <!-- 轮播图开始 -->
+<!-- 
+	<image class="img" src="cloud://production-ue9j7.7072-production-ue9j7-1301900827/huibiao/huibiao009.png"></image>
+ -->
 <view>
-	<swiper class="screen-swiper   "  circular="true" autoplay="true" interval="3000" duration="500">
-		<!-- <swiper-item>
-			<image src="http://img1.imgtn.bdimg.com/it/u=3675415932,4054970339&fm=26&gp=0.jpg"></image>
+	<swiper class="screen-swiper   " circular="true" autoplay="true" interval="5000" duration="500">
+		<swiper-item>
+			<image src="cloud://production-ue9j7.7072-production-ue9j7-1301900827/huibiao/huibiao16bi10.png"></image>
 		</swiper-item>
 		<swiper-item>
-			<image src="http://img1.imgtn.bdimg.com/it/u=3857696996,2875137765&fm=26&gp=0.jpg"></image>
-		</swiper-item> -->
-		<swiper-item>
-			<image src="https://7072-production-ue9j7-1301900827.tcb.qcloud.la/huibiao/huibiao-1.png?sign=06d0baa76773b1a1bb9b91ab26d50ce7&t=1587445666"></image>
+			<image src="cloud://production-ue9j7.7072-production-ue9j7-1301900827/huibiao/lunbo002.jpg"></image>
 		</swiper-item>
 	</swiper>
 </view>
@@ -16,7 +16,7 @@
 
 
 <!-- 导航 部门开始 -->
-<view class="cu-list grid col-3 no-border">
+<view class="cu-list grid col-3 no-border" style="margin-top:2rpx">
 	<view class="cu-item" wx:for="{{departmentList}}" wx:key="index">
 		<navigator url='/pages/departmentInfo/departmentInfo?id={{item.id}}' hover-class="none">
 			<view class="cuIcon-{{item.icon}} text-{{item.color}}"></view>
@@ -27,7 +27,7 @@
 		<view class="cuIcon-evaluate_fill text-cyan"></view>
 		<text>公众号</text>
 	</view>
-	
+
 	<!-- <view class="cu-item" class="cu-item" bindtap='goIdentity' hover-class="none">
 		<view class="cuIcon-text text-pink"></view>
 		<text>报名入口</text>

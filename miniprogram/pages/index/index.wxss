@@ -6,6 +6,10 @@ page {
 }
 
 
+.img{
+  width: 100%;
+ 
+}
 .notice {
   margin-top: 20rpx;
   font-size: 28rpx;
