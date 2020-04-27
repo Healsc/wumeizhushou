@@ -1,0 +1,75 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="left">返回</view>
+	<view slot="content">活动室申请管理</view>
+</cu-custom>
+
+<scroll-view scroll-x class="bg-white nav">
+	<view class="flex text-center">
+		<view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{navList}}" wx:key="index" bindtap="tabSelect" data-ispass="{{item.isPass}}" data-id="{{index}}">
+			{{item.name}}
+		</view>
+	</view>
+</scroll-view>
+
+
+<view>
+	<block wx:for="{{applyList}}" wx:key="index">
+		<view class="container">
+			<view class="part">
+				<view class="title">活动室：</view>
+				<view class="content">{{item._active_room}}</view>
+			</view>
+			<view style="display:flex">
+				<view class="title">活动名称：</view>
+				<view class="content">{{item._active_name}}</view>
+			</view>
+			<view style="display:flex">
+				<view class="title">活动内容：</view>
+				<view class="content">{{item._active_content}}</view>
+			</view>
+			<view style="display:flex">
+				<view class="title">活动时间：</view>
+				<view class="content">{{item._active_date}} \r\t {{item._active_start}}- {{item._active_end}}</view>
+			</view>
+			<view style="display:flex">
+				<view class="title">组织/社团：</view>
+				<view class="content">{{item._active_department}}</view>
+			</view>
+			<view style="display:flex">
+				<view class="title">负责人：</view>
+				<view class="content">{{item._person_name}}</view>
+			</view>
+			<view style="display:flex">
+				<view class="title">联系方式：</view>
+				<view class="content">{{item._person_phone}}</view>
+			</view>
+			<view style="display:flex">
+				<view class="title">申请时间：</view>
+				<view class="content">{{item._post_show_date}}</view>
+			</view>
+			<view style="display:flex">
+				<view class="title">申请人：</view>
+				<view class="content">{{item._apply_department_position}}\r\t{{item._apply_name}}</view>
+			</view>
+			<view wx:if="{{isPass == 1}}" class=" flex flex-wrap justify-between align-center bg-white" style="margin-top:40rpx">
+				<button bindtap="notPass" data-id="{{item._id}}"  class="cu-btn round  bg-red">拒绝</button>
+				<button bindtap="pass" data-id="{{item._id}}"  class="cu-btn round  bg-green">通过</button>
+			</view>
+			<view wx:if="{{isPass == 2}}" class=" flex flex-wrap justify-between align-center bg-white" style="margin-top:40rpx">
+				<button bindtap="notPass" data-id="{{item._id}}"  class="cu-btn round  bg-red">拒绝</button>
+				<button bindtap="toWait" data-id="{{item._id}}"  class="cu-btn round  bg-orange">待处理</button>
+			</view>
+			<view wx:if="{{isPass == 0}}" class=" flex flex-wrap justify-between align-center bg-white" style="margin-top:40rpx">
+				<button bindtap="toWait" data-id="{{item._id}}"  class="cu-btn round  bg-orange">待处理</button>
+				<button bindtap="pass" data-id="{{item._id}}"  class="cu-btn round  bg-green">通过</button>
+			</view>
+			<!--  _apply_department_position -->
+			<!-- <view class=" flex flex-wrap justify-between align-center bg-white" style="margin-top:40rpx">
+				<button wx:if="{{!isWM}}" bindtap="failToPass" data-id="{{item._id}}" data-iswm="{{item._isWM}}" class="cu-btn round  bg-green">通过</button>
+				<button wx:if="{{isWM}}" bindtap="passTofail" data-id="{{item._id}}" data-iswm="{{item._isWM}}" class="cu-btn round  bg-orange">取消通过</button>
+				<button bindtap="del" data-id="{{item._id}}" class="cu-btn round  bg-red">删除</button>
+			</view> -->
+		</view>
+
+	</block>
+</view>

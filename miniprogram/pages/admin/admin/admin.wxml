@@ -36,17 +36,17 @@
 		</navigator>
 	</view>
 	<view class="cu-item arrow">
-		<navigator class="content" url="/pages/admin/updataActiveRoomIntroduce/updataActiveRoomIntroduce" hover-class="none">
+		<navigator class="content" url="/pages/admin/wumeiNumber/wumeiNumber" hover-class="none">
 			<text class="text-grey">舞美认证管理</text>
 		</navigator>
 	</view>
 	<view class="cu-item arrow">
-		<navigator class="content" url="/pages/admin/updataActiveRoomIntroduce/updataActiveRoomIntroduce" hover-class="none">
+		<navigator class="content" url="/pages/admin/zzStNumber/zzStNumber" hover-class="none">
 			<text class="text-grey">组织/社团认证管理</text>
 		</navigator>
 	</view>
 	<view class="cu-item arrow">
-		<navigator class="content" url="/pages/admin/updataActiveRoomIntroduce/updataActiveRoomIntroduce" hover-class="none">
+		<navigator class="content" url="/pages/admin/activeroom/activeroom" hover-class="none">
 			<text class="text-grey">活动室申请管理</text>
 		</navigator>
 	</view>

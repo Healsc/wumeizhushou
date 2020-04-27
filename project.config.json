@@ -357,6 +357,26 @@
 					"pathName": "pages/admin/admin/admin",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "舞美认证管理",
+					"pathName": "pages/admin/wumeiNumber/wumeiNumber",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "组织/社团管理",
+					"pathName": "pages/admin/zzStNumber/zzStNumber",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动室申请管理",
+					"pathName": "pages/admin/activeroom/activeroom",
+					"scene": null
 				}
 			]
 		}

@@ -1,0 +1,53 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="left">返回</view>
+	<view slot="content">舞美认证管理</view>
+</cu-custom>
+
+
+<scroll-view scroll-x class="bg-white nav">
+	<view class="flex text-center">
+		<view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{navList}}" wx:key="index" bindtap="tabSelect" data-iswm="{{item.isWM}}" data-id="{{index}}">
+			{{item.name}}
+		</view>
+	</view>
+</scroll-view>
+<view>
+	<block wx:for="{{WMNumberList}}" wx:key="index">
+		<view class="part">
+			<view style="display:flex">
+				<view style="flex:1">姓名</view>
+				<view style="flex:3">{{item._name}}</view>
+			</view>
+			<view style="display:flex">
+				<view style="flex:1">部门：</view>
+				<view style="flex:3">{{item._department}}</view>
+			</view>
+			<view style="display:flex">
+				<view style="flex:1">职务：</view>
+				<view style="flex:3">{{item._position}}</view>
+			</view>
+			<view style="display:flex">
+				<view style="flex:1">学院：</view>
+				<view style="flex:3">{{item._academy}}</view>
+			</view>
+			<view style="display:flex">
+				<view style="flex:1">班级：</view>
+				<view style="flex:3">{{item._major}}</view>
+			</view>
+			<view style="display:flex">
+				<view style="flex:1">学号：</view>
+				<view style="flex:3">{{item._studentNumber}}</view>
+			</view>
+			<view style="display:flex">
+				<view style="flex:1">手机号：</view>
+				<view style="flex:3">{{item._phone}}</view>
+			</view>
+			<view  class=" flex flex-wrap justify-between align-center bg-white" style="margin-top:40rpx">
+				<button wx:if="{{!isWM}}" bindtap="failToPass" data-id="{{item._id}}" data-iswm="{{item._isWM}}" class="cu-btn round  bg-green">通过</button>
+				<button wx:if="{{isWM}}" bindtap="passTofail" data-id="{{item._id}}" data-iswm="{{item._isWM}}" class="cu-btn round  bg-orange">取消通过</button>
+				<button   bindtap="del" data-id="{{item._id}}" class="cu-btn round  bg-red">删除</button>
+			</view>
+		</view>
+
+	</block>
+</view>

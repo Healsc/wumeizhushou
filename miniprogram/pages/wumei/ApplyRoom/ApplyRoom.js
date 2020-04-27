@@ -103,6 +103,7 @@ Page({
                             db.collection('active-room-apply').add({
                                 data: {
                                     _apply_name: this.data.applyNumber._name,
+                                    _apply_department_position: this.data.applyNumber._department+' '+this.data.applyNumber._position,
                                     _active_name: e.detail.value.title,
                                     _active_content: e.detail.value.content,
                                     _person_name: e.detail.value.name,

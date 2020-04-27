@@ -1,0 +1,8 @@
+/* pages/admin/zzStNumber/zzStNumber.wxss */
+.part {
+    padding: 20rpx 20rpx 20rpx 50rpx;
+    margin: 20rpx 30rpx;
+    border-bottom: 1px solid #ddd;
+    border-radius: 20rpx;
+    background-color: #ffffff;
+}
