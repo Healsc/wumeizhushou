@@ -6,12 +6,23 @@ Page({
         openid: "",
         userInfo: '',
         isShowUserBtn: true,
-        isShowUserInfo: false
+        isShowUserInfo: false,
+        bgUrl: ''
     },
     //事件处理函数
     onLoad: function () {
         this.getSetting();
         this.getOpenID();
+        this.getBGUrl();
+    },
+    getBGUrl() {
+        const db = wx.cloud.database();
+        db.collection('profileBG').doc('profileBG').get().then(res => {
+            console.log(res)
+            this.setData({
+                bgUrl: res.data
+            })
+        })
     },
     /* 获取openid */
     getOpenID() {

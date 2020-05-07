@@ -1,32 +1,36 @@
-
 .cu-form-group .title {
     min-width: calc(4em + 60rpx);
-  }
-  
-  .steps-bottom.cu-steps .cu-item .num::before {
+}
+
+.steps-bottom.cu-steps .cu-item .num::before {
     content: "\e668";
     font-family: 'iconfont';
-  }
-  
-  .text-center{
-      position: absolute;
-      left: 26vw;
-  }
-  .pad-left{
-      padding-left:50rpx; 
-  }
-  .cu-form-group .title {
+}
+
+.text-center {
+    position: absolute;
+    left: 26vw;
+}
+
+.pad-left {
+    padding-left: 50rpx;
+}
+
+.cu-form-group .title {
     min-width: calc(4em + 30rpx);
-  }
-  .pad-right{
-      padding-right:6rpx; 
-  }
-  .beizhu{
-      margin-top: 10rpx;
-      text-align: center;
-      font-size: 26rpx;
-      margin-bottom: 10rpx;
-  }
-  .pl-img{
-      padding-left: 20rpx;
-  }
+}
+
+.pad-right {
+    padding-right: 6rpx;
+}
+
+.beizhu {
+    margin-top: 10rpx;
+    text-align: center;
+    font-size: 26rpx;
+    margin-bottom: 10rpx;
+}
+
+.pl-img {
+    padding-left: 20rpx;
+}

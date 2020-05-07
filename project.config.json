@@ -376,6 +376,14 @@
 					"id": -1,
 					"name": "活动室申请管理",
 					"pathName": "pages/admin/activeroom/activeroom",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/profile/profile",
+					"pathName": "pages/profile/profile/profile",
+					"query": "id=jijianbu",
 					"scene": null
 				}
 			]

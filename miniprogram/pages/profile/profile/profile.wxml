@@ -1,5 +1,5 @@
 <view class="top">
-	<image class="top-bc" src="https://image.weilanwl.com/color2.0/index.jpg"></image>
+	<image class="top-bc" src="{{bgUrl._url}}"></image>
 	<view wx:if="{{isShowUserInfo}}" class="user">
 		<image class="user-img" src="{{userInfo.avatarUrl}}"></image>
 		<view class="user-name">{{userInfo.nickName}}</view>

@@ -41,10 +41,26 @@ Page({
         id: "waiqinbu"
       }
     ],
-    noticeList: []
+    noticeList: [],
+    swiperList: []
   },
 
+  getSwiperList() {
+    const db = wx.cloud.database();
+    db.collection('homeSwiper').get().then(res => {
+      this.setData({
+        swiperList: res.data
+      })
+    })
+  },
+  showSwiper(e) {
+    wx.previewImage({
+      urls: [e.target.dataset.url],
+      current: e.target.dataset.url
+    })
+  },
   onLoad: function () {
+    this.getSwiperList();
     setTimeout(() => {
       wx.stopPullDownRefresh();
     }, 2000);
