@@ -385,6 +385,12 @@
 					"pathName": "pages/profile/profile/profile",
 					"query": "id=jijianbu",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "测试页面",
+					"pathName": "pages/test/test",
+					"scene": null
 				}
 			]
 		}
