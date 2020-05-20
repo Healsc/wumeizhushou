@@ -1,3 +1,4 @@
+@import "/wxParse/wxParse.wxss";
 .detail{
     margin: 40rpx 30rpx;
     border-radius: 20rpx;

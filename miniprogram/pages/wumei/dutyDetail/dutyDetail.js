@@ -1,4 +1,5 @@
-// pages/wumei/dutyDetail/dutyDetail.js
+var WxParse = require('../../../wxParse/wxParse.js');
+
 Page({
 
     /**
@@ -13,7 +14,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-    
+
         this.setData({
             id: options.id
         })
@@ -21,7 +22,7 @@ Page({
     },
     getDutyDetail() {
         wx.showLoading({
-          title: '加载中',
+            title: '加载中',
         })
         wx.cloud.callFunction({
             name: 'getDutyDetail',
@@ -30,15 +31,20 @@ Page({
             },
             success: (res) => {
                 wx.hideLoading({
-                  complete: (res) => {},
+                    complete: (res) => {},
                 })
+                var that = this;
+                WxParse.wxParse('article', 'html', res.result.data._content, that, 3);
                 this.setData({
                     dutyDetail: res.result.data
                 })
-            },fail:(err)=>{console.error(err)}
+            },
+            fail: (err) => {
+                console.error(err)
+            }
         })
     },
-   
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

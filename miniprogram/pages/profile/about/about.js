@@ -1,4 +1,5 @@
-// pages/profile/about/about.js
+var WxParse = require('../../../wxParse/wxParse.js');
+
 Page({
 
     /**

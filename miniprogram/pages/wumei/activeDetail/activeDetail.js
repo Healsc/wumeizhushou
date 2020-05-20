@@ -1,4 +1,5 @@
-// pages/wumei/activeDetail/activeDetail.js
+var WxParse = require('../../../wxParse/wxParse.js');
+
 Page({
 
     /**
@@ -25,6 +26,8 @@ Page({
             wx.hideLoading({
                 complete: (res) => {},
             })
+            var that = this;
+            WxParse.wxParse('article', 'html', res.result.data._content, that, 3);
             this.setData({
                 activeDetail: res.result.data
             })

@@ -2,7 +2,7 @@
 	<view slot="backText">返回</view>
 	<view slot="content">{{dutyDetail._title}}</view>
 </cu-custom>
-<view class="duty ">
-	<!-- <htmltowxml text="{{content}}" /> -->
-	<wxparser rich-text="{{dutyDetail._content}}" />
+<view class="detail">
+	<import src="../../../wxParse/wxParse.wxml" />
+	<template is="wxParse" data="{{wxParseData:article.nodes}}" />
 </view>

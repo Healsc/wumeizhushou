@@ -1,7 +1,7 @@
 {
   "usingComponents": {
 
-    "wxparser": "plugin://wxparserPlugin/wxparser",
+   
     "cu-custom": "/colorui/components/cu-custom"
   },
   "navigationStyle": "custom"
