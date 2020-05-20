@@ -19,20 +19,25 @@
 	<i class="wrap iconfont icon-shanchu" catchtouchend="clear"></i>
 </view>
 
-	<view class="content">
-		<form>
-			<view class="cu-form-group margin-top">
-				<view class="title">部门</view>
-				<input name="title" bind:input="getTitle" placeholder="部门"></input>
-			</view>
-			<button bindtap="clickLogText">发布</button>
-		</form>
-	</view>
+<view class="content">
 
-	<view class="container" style="height:{{editorHeight}}px;">
-		<editor id="editor" class="ql-container" placeholder="{{placeholder}}" bindstatuschange="onStatusChange" bindready="onEditorReady">
-		</editor>
-	</view>
+	<form>
+	<!-- 	<view class="cu-form-group margin-top">
+			<view class="title">部门</view>
+			<input name="title" bind:input="getTitle" placeholder="例:(干训部)"></input>
+		</view> -->
+		<view class="cu-form-group margin-top">
+			<view class="title">部门ID</view>
+			<input name="dId" bind:input="getDId" placeholder="例:ganxunbu"></input>
+		</view>
+		<button bindtap="clickLogText">发布</button>
+	</form>
+</view>
+
+<view class="container" style="height:{{editorHeight}}px;">
+	<editor id="editor" class="ql-container" placeholder="{{placeholder}}" bindstatuschange="onStatusChange" bindready="onEditorReady">
+	</editor>
+</view>
 
 
 

@@ -8,7 +8,8 @@ Page({
      */
     data: {
         id: "",
-        department:""
+        department: "",
+        name: ''
     },
 
     /**
@@ -22,21 +23,21 @@ Page({
     },
     getDepartmentInfo() {
         wx.showLoading({
-          title: '加载中',
+            title: '加载中',
         })
-        db.collection('department').doc(this.data.id).get().then(res=>{
+        db.collection('department').doc(this.data.id).get().then(res => {
             wx.stopPullDownRefresh();
             wx.hideLoading();
-
             var that = this;
             WxParse.wxParse('article', 'html', res.data._content, that, 5);
-          
+            console.log(res.data._name)
             this.setData({
-                department:res.data
+                department: res.data,
+                name: res.data._name
             })
         })
     },
-  
+
     onPullDownRefresh: function () {
         let that = this;
         that.getDepartmentInfo();
@@ -47,6 +48,13 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        let title = '';
+        if (this.data.name == "舞美协会") {
+            title = this.data.name;
+        }
+        return {
+            title: this.data.name == "舞美协会" ? this.data.name : '舞美' + this.data.name,
+            path: "/pages/departmentInfo/departmentInfo?id=" + this.data.id
+        }
     }
 })

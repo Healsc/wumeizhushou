@@ -15,6 +15,7 @@ Page({
                 id: this.data.id
             },
             success: (res) => {
+
                 var that = this;
                 WxParse.wxParse('article', 'html', res.result.data._content, that, 5);
                 wx.stopPullDownRefresh();
@@ -24,7 +25,7 @@ Page({
             }
         })
     },
-   
+
     onLoad: function (options) {
 
         this.setData({

@@ -8,12 +8,16 @@ Page({
     keyboardHeight: 0,
     isIOS: false,
     content: "",
-    title: ""
+    title: "",
+    dId: ""
   },
-  getTitle(e) {
+
+
+  getDId(e) {
     this.setData({
-      title: e.detail.value
+      dId: e.detail.value
     })
+    // console.log(e.detail.value)
   },
   readOnlyChange() {
     this.setData({
@@ -109,7 +113,7 @@ Page({
   clear() {
     this.editorCtx.clear({
       success: function () {
-        
+
       }
     })
   },
@@ -133,7 +137,7 @@ Page({
     wx.chooseImage({
       count: 1,
       success: function (res) {
-       
+
         let suffix = /\.[^\.]+$/.exec(res.tempFilePaths)[0];
         wx.cloud.uploadFile({
           cloudPath: 'department/' + that.data.title + new Date().getTime() + suffix, // 上传至云端的路径
@@ -166,22 +170,38 @@ Page({
     const that = this;
     that.editorCtx.getContents({
       success: function (res) {
-        db.collection('department').add({
+
+        db.collection('department').doc(that.data.dId).update({
           data: {
-            _id:'wumei',
             _createTime: new Date(),
-            _name: that.data.title,
             _content: res.html
+          },
+          success: function (res) {
+            if (res.stats.updated == 1) {
+              console.log(res)
+              wx.showToast({
+                title: '更新成功',
+                icon: "succsee",
+                duration: 1000
+              })
+              that.clear();
+            }
+            if (res.stats.updated == 0) {
+              wx.showToast({
+                title: 'ID错误',
+                icon: "none",
+                duration: 1500
+              })
+            }
+
+          },
+          fail: function () {
+            wx.showToast({
+              title: '更新失败',
+              icon: "none",
+              duration: 1500
+            })
           }
-        }).then(res => {
-          wx.showToast({
-            title: '发布成功',
-            icon: "succsee",
-            duration: 1000
-          })
-          that.clear();
-        }).catch(err => {
-          console.error(err)
         })
         wx.setStorageSync("content", res.html); // 缓存本地
       }

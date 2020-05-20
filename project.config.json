@@ -390,6 +390,20 @@
 					"id": -1,
 					"name": "测试页面",
 					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/departmentInfo/departmentInfo",
+					"pathName": "pages/departmentInfo/departmentInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/updataDepartment/updataDepartment",
+					"pathName": "pages/admin/updataDepartment/updataDepartment",
 					"scene": null
 				}
 			]
