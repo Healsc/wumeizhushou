@@ -1,4 +1,3 @@
-//index.js
 const app = getApp()
 
 Page({
@@ -111,3 +110,4 @@ Page({
     }
   }
 })
+/* healsc@163.com */
