@@ -1,5 +1,3 @@
-//index.js
-//获取应用实例
 const app = getApp()
 Page({
     data: {
@@ -18,7 +16,7 @@ Page({
     getBGUrl() {
         const db = wx.cloud.database();
         db.collection('profileBG').doc('profileBG').get().then(res => {
-            console.log(res)
+            // console.log(res)
             this.setData({
                 bgUrl: res.data
             })
@@ -52,8 +50,6 @@ Page({
             }
         })
     },
-    /*  "pages/profile/zzSTIdentify/zzSTIdentify",
-        "pages/profile/zzSTNumberInfo/zzSTNumberInfo", */
     getZzStNumberInfo() {
         const db = wx.cloud.database();
         db.collection('zzSTNumber').where({

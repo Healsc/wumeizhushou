@@ -16,16 +16,76 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        fileUrl: ''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+
         var article = '<h1>我是HTML代码</h1>';
         var that = this;
         WxParse.wxParse('article', 'html', article, that, 5);
+    },
+    savaExcel(userdata) {
+        let that = this
+        wx.cloud.callFunction({
+            name: "exceltest",
+            data: {
+                userdata: userdata
+            },
+            success(res) {
+              /*   console.log("保存成功", res) */
+                that.getFileUrl(res.result.fileID)
+            },
+            fail() {
+               /*  console.log("保存失败", res) */
+            }
+        })
+    },
+
+    getWm() {
+        let that = this;
+        wx.cloud.callFunction({
+            name: 'getWMNumber'
+        }).then(res => {
+            that.savaExcel(res.result.data)
+            console.log(res.result.data)
+        }).catch(err => {
+            console.log('读取失败')
+        })
+    },
+
+    getFileUrl(fileID) {
+        let that = this;
+        wx.cloud.getTempFileURL({
+            fileList: [fileID],
+            success: res => {
+              /*   console.log("文件下载链接", res.fileList[0].tempFileURL) */
+                that.setData({
+                    fileUrl: res.fileList[0].tempFileURL
+                })
+
+                wx.setClipboardData({
+                    data: res.fileList[0].tempFileURL,
+                    success(res) {
+                        wx.getClipboardData({
+                            success(res) {
+                                console.log("复制成功", res.data) // data
+                            }
+                        })
+                    }
+                })
+
+            },
+            fail: err => {
+                // handle error
+            }
+        })
+    },
+    copyFileUrl() {
+        this.getWm();
     },
 
     /**
@@ -34,7 +94,7 @@ Page({
     onReady: function () {
 
     },
-
+   
     /**
      * 生命周期函数--监听页面显示
      */
