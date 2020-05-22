@@ -24,10 +24,6 @@
 		<text>公众号</text>
 	</view>
 
-	<!-- <view class="cu-item" class="cu-item" bindtap='goIdentity' hover-class="none">
-		<view class="cuIcon-text text-pink"></view>
-		<text>报名入口</text>
-	</view> -->
 </view>
 <!-- 导航 部门结束 -->
 
