@@ -1,7 +1,5 @@
 <!-- 轮播图开始 -->
-<!-- 
-	<image class="img" src="cloud://production-ue9j7.7072-production-ue9j7-1301900827/huibiao/huibiao009.png"></image>
- -->
+
 <view>
 	<swiper class="screen-swiper   " circular="true" autoplay="true" interval="5000" duration="500">
 		<swiper-item wx:for="{{swiperList}}" wx:key="index" bindtap="showSwiper" data-url="{{item._url}}">
