@@ -14,18 +14,18 @@
 			<text class="text-grey">关于我们</text>
 		</navigator>
 	</view>
-<!-- 	<view class="cu-item arrow">
+	<!-- 	<view class="cu-item arrow">
 		<button class="cu-btn content" open-type="contact" hover-class="none">
 			<text class="cuIcon-servicefill text-cyan"></text>
 			<text class="text-grey">在线客服</text>
 		</button>
 	</view> -->
-	<view class="cu-item arrow">
+	<!-- <view class="cu-item arrow">
 		<button class="cu-btn content" open-type="feedback" hover-class="none">
 			<text class="cuIcon-writefill text-green"></text>
 			<text class="text-grey">意见反馈</text>
 		</button>
-	</view>
+	</view> -->
 	<!-- <view class="cu-item arrow">
 		<navigator class="content" url="/pages/profile/updataLog/updataLog" hover-class="none">
 			<text class="cuIcon-formfill text-green"></text>
@@ -33,12 +33,7 @@
 		</navigator>
 	</view> -->
 
-	<view class="cu-item arrow">
-		<button class="cu-btn content" bindtap="openSetting" hover-class="none">
-			<text class="cuIcon-settingsfill text-green"></text>
-			<text class="text-grey">系统设置</text>
-		</button>
-	</view>
+
 	<view class="cu-item arrow">
 		<view class="content" bindtap="goWNIdentify" hover-class="none">
 			<text class="cuIcon-creativefill text-orange"></text>
@@ -50,6 +45,12 @@
 			<text class="cuIcon-light text-orange"></text>
 			<text class="text-grey">组织/社团认证</text>
 		</view>
+	</view>
+	<view class="cu-item arrow margin-top">
+		<button class="cu-btn content" bindtap="openSetting" hover-class="none">
+			<text class="cuIcon-settingsfill text-green"></text>
+			<text class="text-grey">系统设置</text>
+		</button>
 	</view>
 	<view class="cu-item arrow">
 		<button class="cu-btn content" open-type="share" hover-class="none">
