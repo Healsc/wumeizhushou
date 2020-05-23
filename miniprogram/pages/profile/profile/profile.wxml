@@ -14,12 +14,12 @@
 			<text class="text-grey">关于我们</text>
 		</navigator>
 	</view>
-	<view class="cu-item arrow">
+<!-- 	<view class="cu-item arrow">
 		<button class="cu-btn content" open-type="contact" hover-class="none">
 			<text class="cuIcon-servicefill text-cyan"></text>
 			<text class="text-grey">在线客服</text>
 		</button>
-	</view>
+	</view> -->
 	<view class="cu-item arrow">
 		<button class="cu-btn content" open-type="feedback" hover-class="none">
 			<text class="cuIcon-writefill text-green"></text>
