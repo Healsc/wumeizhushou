@@ -26,12 +26,12 @@
 			<text class="text-grey">意见反馈</text>
 		</button>
 	</view>
-	<view class="cu-item arrow">
+	<!-- <view class="cu-item arrow">
 		<navigator class="content" url="/pages/profile/updataLog/updataLog" hover-class="none">
 			<text class="cuIcon-formfill text-green"></text>
 			<text class="text-grey">更新日志</text>
 		</navigator>
-	</view>
+	</view> -->
 
 	<view class="cu-item arrow">
 		<button class="cu-btn content" bindtap="openSetting" hover-class="none">
