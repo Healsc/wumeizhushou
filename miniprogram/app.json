@@ -1,7 +1,7 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/wumei/wumei/wumei",
+       
         "pages/wumei/class/class",
         "pages/wumei/getClassWeek/getClassWeek",
         "pages/wumei/getClassDetail/getClassDetail",
@@ -52,20 +52,15 @@
     "window": {
         "backgroundColor": "#F6F6F6",
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#F6F6F6",
-        "navigationBarTitleText": "东农舞美助手",
+        "navigationBarBackgroundColor": "#AEEEE1",
+        "navigationBarTitleText": "舞美助手",
         "navigationBarTextStyle": "black"
     },
     "sitemapLocation": "sitemap.json",
     "tabBar": {
-        "list": [{
-                "pagePath": "pages/index/index",
-                "text": "首页",
-                "iconPath": "images/icon/home.png",
-                "selectedIconPath": "images/icon/home-sel.png"
-            },
+        "list": [
             {
-                "pagePath": "pages/wumei/wumei/wumei",
+                "pagePath": "pages/index/index",
                 "text": "舞美",
                 "iconPath": "images/icon/wm.png",
                 "selectedIconPath": "images/icon/wm-sel.png"

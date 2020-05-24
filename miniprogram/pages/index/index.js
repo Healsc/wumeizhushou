@@ -1,113 +1,135 @@
-const app = getApp()
-
 Page({
-  data: {
-    departmentList: [{
-        icon: 'cardboardfill',
-        color: 'orange',
-        name: '办公室',
-        id: "bangongshi"
-      }, {
-        icon: 'discoverfill',
-        color: 'yellow',
-        name: '技术部',
-        id: "jishubu"
-      }, {
-        icon: 'news',
-        color: 'olive',
-        name: '干训部',
-        id: "ganxunbu"
-      }, {
-        icon: 'picfill',
-        color: 'green',
-        name: '宣传部',
-        id: "xuanchuanbu"
-      }, {
-        icon: 'likefill',
-        color: 'red',
-        name: '舞美',
-        id: "wumei"
-      },
-      {
-        icon: 'upstagefill',
-        color: 'blue',
-        name: '纪检部',
-        id: "jijianbu"
-      }, {
-        icon: 'choiceness',
-        color: 'mauve',
-        name: '外勤部',
-        id: "waiqinbu"
-      }
-    ],
-    noticeList: [],
-    swiperList: []
-  },
+    data: {
+        openid: "",
+    },
 
-  getSwiperList() {
-    const db = wx.cloud.database();
-    db.collection('homeSwiper').get().then(res => {
-      this.setData({
-        swiperList: res.data
-      })
-    })
-  },
-  showSwiper(e) {
-    wx.previewImage({
-      urls: [e.target.dataset.url],
-      current: e.target.dataset.url
-    })
-  },
-  onLoad: function () {
-    this.getSwiperList();
-    setTimeout(() => {
-      wx.stopPullDownRefresh();
-    }, 2000);
-    this.getNoticeList()
-  },
-  getNoticeList() {
-    wx.showLoading({
-      title: '加载中',
-    })
-    wx.cloud.callFunction({
-      name: 'getNoticeList',
-      data: {
-        skip: 0,
-        limit: 6
-      }
-    }).then((res) => {
-      wx.hideLoading({
-        complete: (res) => {},
-      })
-      this.setData({
-        noticeList: res.result.data
-      })
-      // console.log(res)
-    })
-  },
-  goNoticeList() {
-    wx.navigateTo({
-      url: '/pages/notice/noticeList/noticeList',
-    })
-  },
-  showQrcode() {
-    wx.previewImage({
-      urls: ['cloud://production-ue9j7.7072-production-ue9j7-1301900827/gongzhonghao/gongzhonghao.png'],
-      current: 'https://7072-production-ue9j7-1301900827.tcb.qcloud.la/gongzhonghao/gongzhonghao.png?sign=c66f3fe3eaaa7e8cc7247350c5092805&t=1587362686' // 当前显示图片的http链接      
-    })
-  },
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    let that = this;
-    this.onLoad();
-  },
-  onShareAppMessage: function () {
-    return {
-      title: '东农舞美助手',
-      path: "/pages/index/index"
-    }
-  }
+    goClass(){
+        wx.navigateTo({
+          url: '/pages/wumei/class/class',
+        })
+    },
+    onLoad: function (options) {
+        this.getOpenid();
+    },
+    goToWeekClass(){
+        const db = wx.cloud.database({
+            //env: 'wumei-2070bb'
+        })
+        db.collection('wumeiInfo').where({
+            _openid: this.data.openid,// 填入当前用户 openid
+            _isWM:1 //验证是否为舞美成员
+        }).get({
+            success: (res) => {
+                if(res.data.length){
+                    wx.navigateTo({
+                        url: '/pages/wumei/getweekclass/getweekclass',
+                    })
+                }else{
+                    wx.showModal({
+                        title: '抱歉',
+                        content: '您尚未进行舞美认证或认证审核中',
+                    })
+                }
+            }
+        })
+        
+    },
+    goShowClass() {
+        const db = wx.cloud.database({
+            //env: 'wumei-2070bb'
+        })
+        db.collection('wumeiInfo').where({
+            _openid: this.data.openid,// 填入当前用户 openid
+            _isWM: 1 //验证是否为舞美成员
+        }).get({
+            success: (res) => {
+                if (res.data.length) {
+                    wx.navigateTo({
+                        url: '/pages/wumei/showweekclass/showweekclass',
+                    })
+                } else {
+                    wx.showModal({
+                        title: '抱歉',
+                        content: '您尚未进行舞美认证或认证审核中',
+                    })
+                }
+            },
+            fail: (res) => {
+                wx.showModal({
+                    title: '提示',
+                    content: '请刷新',
+                })
+            } 
+        })
+    },
+    goZhibanWeek(){
+        const db = wx.cloud.database({
+            //env: 'wumei-2070bb'
+        })
+        db.collection('wumeiInfo').where({
+            _openid: this.data.openid,// 填入当前用户 openid
+            _isWM: 1 //验证是否为舞美成员
+        }).get({
+            success: (res) => {
+                if (res.data.length) {
+                    wx.navigateTo({
+                        url: '/pages/wumei/zhiban/zhiban',
+                    })
+                } else {
+                    wx.showModal({
+                        title: '抱歉',
+                        content: '您尚未进行舞美认证或认证审核中',
+                    })
+                }
+            },
+            fail: (res) => {
+                wx.showModal({
+                    title: '提示',
+                    content: '请刷新',
+                })
+            }
+        })
+    },
+    goQiandao() {
+        const db = wx.cloud.database({
+           // env: 'wumei-2070bb'
+        })
+        db.collection('wumeiInfo').where({
+            _openid: this.data.openid,// 填入当前用户 openid
+          
+            _isWM: 1 //验证是否为舞美成员
+        }).get({
+            success: (res) => {
+                if (res.data.length) {
+                    wx.navigateTo({
+                        url: '/pages/wumei/huodongInfo/huodongInfo',
+                    })
+                } else {
+                    wx.showModal({
+                        title: '抱歉',
+                        content: '您尚未进行舞美认证或认证审核中',
+                    })
+                }
+            },
+            fail: (res) => {
+                wx.showModal({
+                    title: '提示',
+                    content: '请刷新',
+                })
+            }
+        })
+    },
+    // 获取用户openid
+    getOpenid() {
+        let that = this;
+        wx.cloud.callFunction({
+            name: 'login',
+            complete: res => {
+                var openid = res.result.openid;
+                that.setData({
+                    openid: openid
+                })
+            }
+        })
+    },  
 })
-/* healsc@163.com */

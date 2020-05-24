@@ -1,50 +1,46 @@
-page {
-  background: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.indexColor {
+    color: #c3c;
 }
 
 
-.img{
-  width: 100%;
- 
-}
-.notice {
-  margin-top: 20rpx;
-  font-size: 28rpx;
-  color: #888;
+.cu-bar .content image {
+    height: 60rpx;
+    width: 240rpx;
 }
 
-.notice-nav {
-  width: 100%;
-  padding-left: 50rpx;
-  min-height: 100rpx;
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
+.cardTitle {
+    color: #fff;
+    padding: 90rpx 60rpx;
+    font-size: 40rpx;
+    font-weight: 300;
+    transform: skew(-10deg, 0deg);
+    position: relative;
+    text-shadow: 0px 0px 6rpx rgba(0, 0, 0, 0.3)
 }
 
-.part{
-  padding: .6rem .6rem 1rem 1.6rem;
-  min-height: 2rem;
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
-}
-.part .part-title{
-  font-size: 16px;
-}
-.part .part-time{
-  font-size: 14px;
-  position: absolute;
-  right: 1rem;
+.cardTitle::before {
+    content: "";
+    position: absolute;
+    width: 60rpx;
+    height: 6rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+    display: block;
+    top: 60rpx;
+    left: 50rpx;
+    transform: skew(10deg, 0deg);
 }
 
-.notice-btn {
-  background-color: #fff;
-  margin: 20rpx 0;
-  height: 100rpx;
-  line-height: 100rpx;
-  font-size: 30rpx;
+.cardTitle::after {
+    content: "";
+    position: absolute;
+    width: 140rpx;
+    border-radius: 6rpx;
+    height: 24rpx;
+    background-color: #fff;
+    display: block;
+    bottom: 76rpx;
+    left: 90rpx;
+    transform: skew(10deg, 0deg);
+    opacity: 0.1;
 }
