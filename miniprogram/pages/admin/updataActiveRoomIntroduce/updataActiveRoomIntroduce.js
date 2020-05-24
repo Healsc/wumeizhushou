@@ -17,6 +17,7 @@ Page({
     })
   },
   getTime(e) {
+    console.log(e.detail.value)
     this.setData({
       time: e.detail.value
     })
@@ -172,11 +173,11 @@ Page({
     const that = this;
     that.editorCtx.getContents({
       success: function (res) {
-        db.collection('activeroom-introduce').add({
+        db.collection('active-room-introduce').add({
           data: {
             _createTime: new Date(),
             _title: that.data.title,
-            _roomid:this.data.time,
+            _roomid:that.data.time,
             _content: res.html
           }
         }).then(res => {

@@ -405,6 +405,13 @@
 					"id": -1,
 					"name": "pages/admin/updataDepartment/updataDepartment",
 					"pathName": "pages/admin/updataDepartment/updataDepartment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/updataActiveRoomIntroduce/updataActiveRoomIntroduce",
+					"pathName": "pages/admin/updataActiveRoomIntroduce/updataActiveRoomIntroduce",
 					"scene": null
 				}
 			]
