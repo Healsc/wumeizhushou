@@ -14,13 +14,13 @@ Page({
             name: '全部'
         }, {
             id: 1,
-            name: '申请中'
+            name: '预约中'
         }, {
             id: 2,
-            name: '申请成功'
+            name: '预约成功'
         }, {
             id: 0,
-            name: '申请失败'
+            name: '预约失败'
         }],
         applyCount: ''
     },

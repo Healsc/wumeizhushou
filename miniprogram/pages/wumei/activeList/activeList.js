@@ -6,19 +6,6 @@ Page({
      * 页面的初始数据
      */
     data: {
-        CustomBar: app.globalData.CustomBar,
-        activeList: [{
-            id: "juchang",
-            name: "音乐厅剧场"
-        }, {
-            id: "huodongshi",
-            name: "音乐厅活动室"
-        }, {
-            id: "dahuo",
-            name: "大学生活动中心"
-        }],
-        activeid: "",
-        activename: "",
         activeListInfo: [],
         isWM: false,
         openid: ""
@@ -48,20 +35,11 @@ Page({
         })
     },
     /* active-juchang */
-    showModal(e) {
-
-        this.setData({
-            activeid: e.target.dataset.id,
-            activename: e.target.dataset.name,
-            modalName: e.currentTarget.dataset.target
-        })
-        wx.showLoading({
-            title: '加载中',
-        })
+    getList() {
         wx.cloud.callFunction({
             name: "getActiveList",
             data: {
-                id: e.target.dataset.id
+                id: 'huodongshi'
             }
         }).then(res => {
             wx.hideLoading();
@@ -70,13 +48,8 @@ Page({
             })
             // console.log(res.result.data)
         })
-
     },
-    hideModal(e) {
-        this.setData({
-            modalName: null
-        })
-    },
+   
     goActiveDetail(e) {
         if (this.data.isWM) {
             wx.navigateTo({
@@ -97,11 +70,8 @@ Page({
      */
     onLoad: function (options) {
         this.getOpenid();
-        setTimeout(() => {
-            wx.stopPullDownRefresh({
-                complete: (res) => {},
-            })
-        }, 1500)
+        this.getList();
+      
     },
 
     /**

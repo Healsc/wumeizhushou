@@ -1,6 +1,6 @@
 <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
 	<view slot="backText">返回</view>
-	<view slot="content">活动安排</view>
+	<view slot="content">{{activeDetail._title}}活动信息</view>
 </cu-custom>
 <view class="detail">
 	<import src="../../../wxParse/wxParse.wxml" />

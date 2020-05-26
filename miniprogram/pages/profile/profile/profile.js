@@ -74,7 +74,7 @@ Page({
     /* 分享 */
     onShareAppMessage: function (res) {
         return {
-            title: '东农舞美助手',
+            title: '舞美助手',
             path: "/pages/profile/profile/profile"
         }
     },

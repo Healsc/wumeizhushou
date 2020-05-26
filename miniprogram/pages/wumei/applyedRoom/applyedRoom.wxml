@@ -1,6 +1,6 @@
 <cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
 	<view slot="backText">返回</view>
-	<view slot="content">活动室借用信息</view>
+	<view slot="content">活动室预约信息</view>
 </cu-custom>
 
 <scroll-view scroll-x class="bg-white nav" scroll-with-animation scroll-left="{{scrollLeft}}">

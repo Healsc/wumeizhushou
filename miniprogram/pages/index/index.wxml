@@ -1,26 +1,75 @@
-	<scroll-view scroll-y class="scrollPage">
-		<view class="cu-card">
-			<navigator url="/pages/wumei/activityRoom/activityRoom" class="cu-item bg-img shadow-blur" style="background-image:url(https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg)" bindtap='goToWeekClass'>
-				<view class="cardTitle">
-					活动室
-				</view>
+<view style="margin:20rpx">
+	<swiper  class="screen-swiper round-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+		<swiper-item style="border-radius:20rpx" wx:for="{{swiperList}}" wx:key="index" bindtap="showSwiper" data-url="{{item._url}}">
+			<image src="{{item._url}}" data-url="{{item._url}}"></image>
+		</swiper-item>
+	</swiper>
+</view>
+
+<view class="margin-radius">
+	<view class="cu-bar bg-white ">
+		<view class="action">
+			<text class="cuIcon-title text-green"></text>
+			<text>社团/组织</text>
+		</view>
+	</view>
+	<view class="cu-list grid col-4 no-border" style="border-top:2rpx solid #ddd">
+		<view class="cu-item" class="cu-item" hover-class="none">
+			<navigator url="/pages/wumei/activeRoomInfoList/activeRoomInfoList" hover-class="none">
+				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<text>概况信息</text>
 			</navigator>
-			<view class="cu-item bg-img shadow-blur" style="background-image:url(https://image.weilanwl.com/color2.0/plugin/qpct2148.jpg)" bindtap='goClass'>
-				<view class="cardTitle">
-					课表信息
-				</view>
-			</view>
-			<navigator url="/pages/wumei/dutyList/dutyList" class="cu-item bg-img shadow-blur" style="background-image:url(https://7072-production-ue9j7-1301900827.tcb.qcloud.la/images/bgimg002.png?sign=103d92937efb968dfbeb57db0f73b28b&t=1587432722)">
-				<view class="cardTitle">
-					值班信息
-				</view>
+		</view>
+		<view class="cu-item" class="cu-item" hover-class="none">
+			<navigator url="/pages/wumei/applyedRoom/applyedRoom" hover-class="none">
+				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<text>预约信息</text>
 			</navigator>
 
-			<navigator url="/pages/wumei/activeList/activeList" class="cu-item bg-img shadow-blur" style="background-image:url(https://7072-production-ue9j7-1301900827.tcb.qcloud.la/images/bg_002.jpg?sign=0602d6825854d5e94be1d8318e2f21fd&t=1587431836)">
-				<view class="cardTitle">
-					活动信息
-				</view>
-			</navigator>
-		
 		</view>
-	</scroll-view>
+		<view class="cu-item" class="cu-item" hover-class="none">
+			<navigator url="/pages/wumei/ApplyRoom/ApplyRoom" hover-class="none">
+				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<text>预约活动室</text>
+			</navigator>
+		</view>
+		<view class="cu-item" class="cu-item" hover-class="none">
+			<navigator url="/pages/wumei/myApplyRoom/myApplyRoom" hover-class="none">
+				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<text>我的预约</text>
+			</navigator>
+		</view>
+	</view>
+</view>
+
+
+
+
+<view class="margin-radius">
+	<view class="cu-bar bg-white">
+		<view class="action">
+			<text class="cuIcon-title text-green"></text>
+			<text>舞美协会</text>
+		</view>
+	</view>
+	<view class="cu-list grid col-4 no-border" style="border-top:2rpx solid #ddd">
+		<view class="cu-item" class="cu-item">
+			<navigator url="/pages/wumei/getClassWeek/getClassWeek" hover-class="none">
+				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<text>课表收集</text>
+			</navigator>
+		</view>
+		<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+			<navigator url="/pages/wumei/dutyList/dutyList" hover-class="none">
+				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<text>值班安排</text>
+			</navigator>
+		</view>
+		<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+			<navigator url="/pages/wumei/activeList/activeList" hover-class="none">
+				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<text>活动安排</text>
+			</navigator>
+		</view>
+	</view>
+</view>

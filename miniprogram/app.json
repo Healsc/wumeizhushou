@@ -2,19 +2,21 @@
     "pages": [
         "pages/index/index",
        
-        "pages/wumei/class/class",
+        
         "pages/wumei/getClassWeek/getClassWeek",
         "pages/wumei/getClassDetail/getClassDetail",
-        "pages/wumei/showClassList/showClassList",
-        "pages/wumei/showClassDetail/showClassDetail",
+       
         "pages/wumei/dutyList/dutyList",
         "pages/wumei/dutyDetail/dutyDetail",
+
         "pages/wumei/activeList/activeList",
         "pages/wumei/activeDetail/activeDetail",
-        "pages/wumei/activityRoom/activityRoom",
+
+      
         "pages/wumei/ApplyRoom/ApplyRoom",
         "pages/wumei/myApplyRoom/myApplyRoom",
         "pages/wumei/applyedRoom/applyedRoom",
+
         "pages/wumei/activeRoomInfoList/activeRoomInfoList",
         "pages/wumei/activeRoomInfoDetail/activeRoomInfoDetail",
         
@@ -23,16 +25,9 @@
         "pages/profile/profile/profile",
         "pages/profile/about/about",
         "pages/profile/wmIdentify/wmIdentify",
-        "pages/profile/updataLog/updataLog",
         "pages/profile/wmNumberInfo/wmNumberInfo",
         "pages/profile/zzSTIdentify/zzSTIdentify",
         "pages/profile/zzSTNumberInfo/zzSTNumberInfo",
-
-
-        "pages/departmentInfo/departmentInfo",
-
-        "pages/notice/noticeList/noticeList",
-        "pages/notice/noticeDetail/noticeDetail",
 
         "pages/admin/admin/admin",
         "pages/admin/addNotice/addNotice",
@@ -52,7 +47,7 @@
     "window": {
         "backgroundColor": "#F6F6F6",
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#AEEEE1",
+        "navigationBarBackgroundColor": "#F6F6F6",
         "navigationBarTitleText": "舞美助手",
         "navigationBarTextStyle": "black"
     },

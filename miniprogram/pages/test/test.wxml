@@ -1,8 +1,93 @@
-<!--pages/test/test.wxml-->
-<text>pages/test/test.wxml</text>
+<!-- <text>pages/test/test.wxml</text>
 
 
-<import src="../../wxParse/wxParse.wxml"/>
+<import src="../../wxParse/wxParse.wxml" />
 
-<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+<template is="wxParse" data="{{wxParseData:article.nodes}}" />
 <button bindtap="copyFileUrl">copy</button>
+ -->
+
+
+<view class="cu-bar bg-white margin-top">
+	<view class="action">
+		<text class="cuIcon-title text-green"></text>
+		<text>活动室</text>
+	</view>
+</view>
+<view class="cu-list grid col-4 no-border">
+	<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+		<view class="cuIcon-evaluate_fill text-cyan"></view>
+		<text>概况信息</text>
+	</view>
+	<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+		<view class="cuIcon-evaluate_fill text-cyan"></view>
+		<text>预约信息</text>
+	</view>
+	<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+		<view class="cuIcon-evaluate_fill text-cyan"></view>
+		<text>预约活动室</text>
+	</view>
+	<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+		<view class="cuIcon-evaluate_fill text-cyan"></view>
+		<text>我的预约</text>
+	</view>
+</view>
+
+
+
+
+<view class="cu-bar bg-white " style="margin-top:2rpx">
+	<view class="action">
+		<text class="cuIcon-title text-green"></text>
+		<text>课表相关</text>
+	</view>
+</view>
+<view class="cu-list grid col-4 no-border">
+	<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+		<view class="cuIcon-evaluate_fill text-cyan"></view>
+		<text>课表收集</text>
+	</view>
+	<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+		<view class="cuIcon-evaluate_fill text-cyan"></view>
+		<text>课表信息</text>
+	</view>
+</view>
+
+<view class="cu-bar bg-white " style="margin-top:2rpx">
+	<view class="action">
+		<text class="cuIcon-title text-green"></text>
+		<text>值班相关</text>
+	</view>
+</view>
+<view class="cu-list grid col-4 no-border">
+	<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+		<view class="cuIcon-evaluate_fill text-cyan"></view>
+		<text>办公室值班</text>
+	</view>
+	<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+		<view class="cuIcon-evaluate_fill text-cyan"></view>
+		<text>一站式值班</text>
+	</view>
+</view>
+
+
+<view class="cu-bar bg-white " style="margin-top:2rpx">
+	<view class="action">
+		<text class="cuIcon-title text-green"></text>
+		<text>活动安排</text>
+	</view>
+</view>
+<view class="cu-list grid col-4 no-border">
+	<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+		<view class="cuIcon-evaluate_fill text-cyan"></view>
+		<text>活动室活动</text>
+	</view>
+	<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+		<view class="cuIcon-evaluate_fill text-cyan"></view>
+		<text>大学生活动中心</text>
+	</view>
+	<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
+		<view class="cuIcon-evaluate_fill text-cyan"></view>
+		<text>剧场</text>
+	</view>
+</view>

@@ -1,6 +1,6 @@
 <cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
 	<view slot="backText">返回</view>
-	<view slot="content">我的申请</view>
+	<view slot="content">我的预约</view>
 </cu-custom>
 
 <scroll-view scroll-x class="bg-white nav">
@@ -12,7 +12,7 @@
 </scroll-view>
 <view style="margin-bottom:30rpx">
 	<view class="cu-form-group margin-top pad-left">
-		<view class="title">申请数量</view>
+		<view class="title">预约数量</view>
 		<text class='text-center pad-left-cont'>{{applyCount}}</text>
 	</view>
 	<block wx:for="{{myApplyList}}" wx:key="index">
@@ -25,12 +25,12 @@
 			<text class='text-center pad-left-cont'>{{item._active_content}}</text>
 		</view>
 		<view class="cu-form-group pad-left">
-			<view class="title gudingwidth">申请组织/社团</view>
+			<view class="title gudingwidth">预约组织/社团</view>
 			<text class='text-center pad-left-cont'>{{item._active_department}}</text>
 		</view>
 
 		<view class="cu-form-group pad-left">
-			<view class="title">申请教室</view>
+			<view class="title">预约教室</view>
 			<text class='text-center pad-left-cont'>{{item._active_room}}</text>
 		</view>
 
@@ -53,13 +53,13 @@
 		</view>
 		<view class="cu-form-group pad-left">
 			<view class="title">当前状态</view>
-			<text class='text-center pad-left-cont' style="color:red" wx:if="{{item._isPass == 0}}">申请失败</text>
-			<text class='text-center pad-left-cont' wx:if="{{item._isPass == 1}}">申请中</text>
-			<text class='text-center pad-left-cont' style="color:green" wx:if="{{item._isPass == 2}}">申请成功</text>
+			<text class='text-center pad-left-cont' style="color:red" wx:if="{{item._isPass == 0}}">预约失败</text>
+			<text class='text-center pad-left-cont' wx:if="{{item._isPass == 1}}">预约中</text>
+			<text class='text-center pad-left-cont' style="color:green" wx:if="{{item._isPass == 2}}">预约成功</text>
 		</view>
 		<view class="cu-form-group pad-left" wx:if="{{item._isPass == 0}}">
 			<view class="title gudingwidth">备注</view>
-			<text class='text-center pad-left-cont' style="color:red" >申请时间冲突或活动内容不符合申请条件</text>
+			<text class='text-center pad-left-cont' style="color:red" >预约时间冲突或活动内容不符合预约条件</text>
 		</view>
 	</block>
 </view>

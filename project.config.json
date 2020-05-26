@@ -412,6 +412,20 @@
 					"id": -1,
 					"name": "pages/admin/updataActiveRoomIntroduce/updataActiveRoomIntroduce",
 					"pathName": "pages/admin/updataActiveRoomIntroduce/updataActiveRoomIntroduce",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/activeList/activeList",
+					"pathName": "pages/wumei/activeList/activeList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wumei/activeList/activeList",
+					"pathName": "pages/wumei/activeList/activeList",
 					"scene": null
 				}
 			]

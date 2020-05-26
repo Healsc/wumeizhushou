@@ -3,30 +3,17 @@
 	<view slot="content">活动信息</view>
 </cu-custom>
 
+
+
+
+
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
-	<block wx:for="{{activeList}}" wx:key="index">
-		<view class="cu-item arrow" data-name="{{item.name}}"  data-id="{{item.id}}" bindtap="showModal" data-target="DrawerModalR">
-			<view class="content" data-name="{{item.name}}"  data-id="{{item.id}}" hover-class="none">
-				<text class="text-grey" data-name="{{item.name}}"   data-id="{{item.id}}">{{item.name}}</text>
-			</view>
-		</view>
-	</block>
-
-</view>
-
-<view class="cu-modal drawer-modal justify-end {{modalName=='DrawerModalR'?'show':''}}" bindtap="hideModal">
-	<view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
-		<view class="cu-list menu text-left">
-			<view class="cu-item">
-				<view class="content">
-					<view>{{activename}}</view>
-				</view>
-			</view>
-			<view class="cu-item arrow" wx:for="{{activeListInfo}}" wx:key="index">
-				<view class="content" data-activeid="{{activeid}}" data-id="{{item._id}}" bindtap="goActiveDetail">
-					<view data-activeid="{{activeid}}" data-id="{{item._id}}">{{item._title}}</view>
-				</view>
-			</view>
-		</view>
+	<view class="cu-item arrow" wx:for="{{activeListInfo}}" wx:key="index">
+		<navigator url="/pages/wumei/activeDetail/activeDetail?id={{item._id}}" class="content"  hover-class="none">
+			<!-- <text class="cuIcon-formfill text-green"></text> -->
+			<text class="text-grey">{{item._title}}</text>
+		</navigator>
 	</view>
 </view>
+
+
