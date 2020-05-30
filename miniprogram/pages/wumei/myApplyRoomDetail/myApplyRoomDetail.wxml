@@ -1,0 +1,53 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">我的预约详情</view>
+</cu-custom>
+<view class="cu-form-group margin-top ">
+	<view class="title gudingwidth">活动名</view>
+	<text class='text-center '>{{applyDetail._active_name}}</text>
+</view>
+<view class="cu-form-group ">
+	<view class="title gudingwidth">活动内容</view>
+	<text class='text-center '>{{applyDetail._active_content}}</text>
+</view>
+<view class="cu-form-group ">
+	<view class="title gudingwidth">预约组织/社团</view>
+	<text class='text-center '>{{applyDetail._active_department}}</text>
+</view>
+
+<view class="cu-form-group ">
+	<view class="title">预约教室</view>
+	<text class='text-center '>{{applyDetail._active_room}}</text>
+</view>
+
+<view class="cu-form-group ">
+	<view class="title">使用时间</view>
+	<text class='text-center'>{{applyDetail._active_date}} \r\t \r\t {{applyDetail._active_start}}-{{applyDetail._active_end}}</text>
+</view>
+
+<view class="cu-form-group ">
+	<view class="title">活动负责人</view>
+	<text class='text-center '>{{applyDetail._person_name}}</text>
+</view>
+<view class="cu-form-group ">
+	<view class="title">负责人联系方式</view>
+	<text class='text-center '>{{applyDetail._person_phone}}</text>
+</view>
+<view class="cu-form-group ">
+	<view class="title">申请时间</view>
+	<text class='text-center '>{{applyDetail._post_show_date}}</text>
+</view>
+<view class="cu-form-group ">
+	<view class="title">当前状态</view>
+	<text class='text-center ' style="color:red" wx:if="{{applyDetail._isPass == 0}}">预约失败</text>
+	<text class='text-center ' wx:if="{{applyDetail._isPass == 1}}">预约中</text>
+	<text class='text-center' style="color:green" wx:if="{{applyDetail._isPass == 2}}">预约成功</text>
+</view>
+<view class="cu-form-group " wx:if="{{applyDetail._isPass == 0}}">
+	<view class="title gudingwidth">备注</view>
+	<text class='text-center  mauve'>预约时间冲突或活动内容不符合预约条件</text>
+</view>
+<view class="cu-form-group " wx:if="{{applyDetail._isPass != 0}}">
+	<view class="title gudingwidth">备注</view>
+	<text class='text-center text-mauve'>取消预约请提前告知，联系邮箱：wumeixiehui@163.com </text>
+</view>

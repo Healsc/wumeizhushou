@@ -11,11 +11,11 @@ Page({
         endTime: '请选择',
         date: '请选择',
         index: null,
-        rommPicker: ['音乐厅101', '音乐厅104', '音乐厅106',
-        '音乐厅109', '音乐厅110', '音乐厅111',
-        '音乐厅112','音乐厅113', '音乐厅212',
-            '音乐厅307', '音乐厅308', 
-            '音乐厅309', '音乐厅310', '音乐厅312', '音乐厅314'
+        rommPicker: ['活动室101', '活动室102', '活动室104', '活动室106',
+            '活动室109', '活动室110', '活动室111',
+            '活动室113', '活动室212',
+            '活动室309', '活动室310',
+            '活动室312', '活动室314', '活动室317', '活动室318','活动室320'
         ]
     },
     getOpenID() {
@@ -103,12 +103,12 @@ Page({
                             db.collection('active-room-apply').add({
                                 data: {
                                     _apply_name: this.data.applyNumber._name,
-                                    _apply_department_position: this.data.applyNumber._department+' '+this.data.applyNumber._position,
+                                    _apply_department_position: this.data.applyNumber._department + ' ' + this.data.applyNumber._position,
                                     _active_name: e.detail.value.title,
                                     _active_content: e.detail.value.content,
                                     _person_name: e.detail.value.name,
                                     _person_phone: e.detail.value.phone,
-                                    _active_department:this.data.applyNumber._department,
+                                    _active_department: this.data.applyNumber._department,
                                     _active_room: this.data.rommPicker[this.data.index],
                                     _active_date: this.data.date,
                                     _active_start: this.data.startTime,

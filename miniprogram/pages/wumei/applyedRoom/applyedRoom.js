@@ -10,7 +10,8 @@ Page({
         scrollLeft: 0,
         rid: 104,
         date: "",
-        activeroomList: []
+        activeroomList: [],
+        isShowToast:false
     },
     getActiveroomList() {
         wx.showLoading({
@@ -26,13 +27,18 @@ Page({
             wx.hideLoading({
                 complete: (res) => {},
             })
+            wx.stopPullDownRefresh({
+              complete: (res) => {},
+            })
             if (res.result.data.length) {
                 this.setData({
-                    activeroomList: res.result.data
+                    activeroomList: res.result.data,
+                    isShowToast:false
                 })
             } else {
                 this.setData({
-                    activeroomList: []
+                    activeroomList: [],
+                    isShowToast:true
                 })
             }
 
@@ -51,7 +57,7 @@ Page({
     },
     getActiveList() {
         const db = wx.cloud.database();
-        db.collection('active-room-introduce').orderBy('roomid', 'asc').get().then(res => {
+        db.collection('active-room-introduce').orderBy('_roomid', 'asc').get().then(res => {
             this.setData({
                 roomList: res.data
             })
@@ -62,8 +68,6 @@ Page({
         this.setData({
             date: e.detail.value
         })
-
-
         this.getActiveroomList();
     },
     tabSelect(e) {
@@ -133,7 +137,7 @@ Page({
      */
     onShareAppMessage: function () {
         return {
-            title: '音乐厅活动室借用信息',
+            title: '活动室预约信息',
             path: "/pages/wumei/applyedRoom/applyedRoom"
         }
     }

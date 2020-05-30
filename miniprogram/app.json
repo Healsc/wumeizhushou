@@ -14,8 +14,11 @@
 
       
         "pages/wumei/ApplyRoom/ApplyRoom",
+         
         "pages/wumei/myApplyRoom/myApplyRoom",
+        "pages/wumei/myApplyRoomDetail/myApplyRoomDetail",
         "pages/wumei/applyedRoom/applyedRoom",
+       
 
         "pages/wumei/activeRoomInfoList/activeRoomInfoList",
         "pages/wumei/activeRoomInfoDetail/activeRoomInfoDetail",

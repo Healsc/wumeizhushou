@@ -40,6 +40,7 @@ Page({
                 openid: res.result.openid
             })
             this.getMyApplyRoom();
+            this.getApplyCounts();
         })
     },
     getApplyCounts() {
@@ -50,7 +51,6 @@ Page({
             this.setData({
                 applyCount: res.total
             })
-           
         }).catch(err => {
             console.error(err)
         })
@@ -119,7 +119,7 @@ Page({
     onLoad: function (options) {
 
         this.getOpenId();
-        this.getApplyCounts();
+      
     },
 
     /**

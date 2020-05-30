@@ -11,55 +11,40 @@
 	</view>
 </scroll-view>
 <view style="margin-bottom:30rpx">
-	<view class="cu-form-group margin-top pad-left">
+	<view class="cu-form-group  top-count">
 		<view class="title">预约数量</view>
 		<text class='text-center pad-left-cont'>{{applyCount}}</text>
 	</view>
-	<block wx:for="{{myApplyList}}" wx:key="index">
-		<view class="cu-form-group margin-top pad-left">
-			<view class="title gudingwidth">活动名</view>
-			<text class='text-center pad-left-cont'>{{item._active_name}}</text>
-		</view>
-		<view class="cu-form-group pad-left">
-			<view class="title gudingwidth">活动内容</view>
-			<text class='text-center pad-left-cont'>{{item._active_content}}</text>
-		</view>
-		<view class="cu-form-group pad-left">
-			<view class="title gudingwidth">预约组织/社团</view>
-			<text class='text-center pad-left-cont'>{{item._active_department}}</text>
-		</view>
 
-		<view class="cu-form-group pad-left">
-			<view class="title">预约教室</view>
-			<text class='text-center pad-left-cont'>{{item._active_room}}</text>
-		</view>
+	<view>
+		<block wx:for="{{myApplyList}}" wx:key="index">
+			<view class="part">
+				<navigator url="/pages/wumei/myApplyRoomDetail/myApplyRoomDetail?id={{item._id}}" hover-class="none">
+					<view>
+						预约教室：{{item._active_room}}
+					</view>
+					<view>
+						活动内容：{{item._active_name}}
+					</view>
 
-		<view class="cu-form-group pad-left">
-			<view class="title">使用时间</view>
-			<text class='text-center pad-left-cont'>{{item._active_date}} \r\t \r\t {{item._active_start}}-{{item._active_end}}</text>
-		</view>
+					<view>
+						活动时间：{{item._active_start}}-{{item._active_end}}
+					</view>
+					<view class="text-red" wx:if="{{item._isPass == 0}}">
+						当前状态：预约失败
+					</view>
+					<view class="text-cyan" wx:if="{{item._isPass == 1}}">
+						当前状态：预约中
+					</view>
+					<view style="color:green" wx:if="{{item._isPass == 2}}">
+						当前状态：预约成功
+					</view>
+				</navigator>
+			</view>
 
-		<view class="cu-form-group pad-left">
-			<view class="title">活动负责人</view>
-			<text class='text-center pad-left-cont'>{{item._person_name}}</text>
-		</view>
-		<view class="cu-form-group pad-left">
-			<view class="title">负责人联系方式</view>
-			<text class='text-center pad-left-cont'>{{item._person_phone}}</text>
-		</view>
-		<view class="cu-form-group pad-left">
-			<view class="title">申请时间</view>
-			<text class='text-center pad-left-cont'>{{item._post_show_date}}</text>
-		</view>
-		<view class="cu-form-group pad-left">
-			<view class="title">当前状态</view>
-			<text class='text-center pad-left-cont' style="color:red" wx:if="{{item._isPass == 0}}">预约失败</text>
-			<text class='text-center pad-left-cont' wx:if="{{item._isPass == 1}}">预约中</text>
-			<text class='text-center pad-left-cont' style="color:green" wx:if="{{item._isPass == 2}}">预约成功</text>
-		</view>
-		<view class="cu-form-group pad-left" wx:if="{{item._isPass == 0}}">
-			<view class="title gudingwidth">备注</view>
-			<text class='text-center pad-left-cont' style="color:red" >预约时间冲突或活动内容不符合预约条件</text>
-		</view>
-	</block>
+		</block>
+	</view>
+
+
+
 </view>

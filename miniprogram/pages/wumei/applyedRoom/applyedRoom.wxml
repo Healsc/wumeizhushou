@@ -33,3 +33,7 @@
 
 	</block>
 </view>
+
+<view wx:if="{{isShowToast}}" class=' bg-white padding-xl radius shadow-lg margin-top'>
+	<view class='text-center margin-bottom text-lg  text-grey jiacu'>暂无预约信息</view>
+</view>
