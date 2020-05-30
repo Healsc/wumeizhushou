@@ -16,26 +16,26 @@
 	<view class="cu-list grid col-4 no-border" style="border-top:2rpx solid #ddd">
 		<view class="cu-item" class="cu-item" hover-class="none">
 			<navigator url="/pages/wumei/activeRoomInfoList/activeRoomInfoList" hover-class="none">
-				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<view class="cuIcon-samefill text-cyan"></view>
 				<text>概况信息</text>
 			</navigator>
 		</view>
 		<view class="cu-item" class="cu-item" hover-class="none">
 			<navigator url="/pages/wumei/applyedRoom/applyedRoom" hover-class="none">
-				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<view class="cuIcon-list text-cyan"></view>
 				<text>预约信息</text>
 			</navigator>
 
 		</view>
 		<view class="cu-item" class="cu-item" hover-class="none">
 			<navigator url="/pages/wumei/ApplyRoom/ApplyRoom" hover-class="none">
-				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<view class="cuIcon-edit text-cyan"></view>
 				<text>预约活动室</text>
 			</navigator>
 		</view>
 		<view class="cu-item" class="cu-item" hover-class="none">
 			<navigator url="/pages/wumei/myApplyRoom/myApplyRoom" hover-class="none">
-				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<view class="cuIcon-profile text-cyan"></view>
 				<text>我的预约</text>
 			</navigator>
 		</view>
@@ -55,19 +55,19 @@
 	<view class="cu-list grid col-4 no-border" style="border-top:2rpx solid #ddd">
 		<view class="cu-item" class="cu-item">
 			<navigator url="/pages/wumei/getClassWeek/getClassWeek" hover-class="none">
-				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<view class="cuIcon-copy text-cyan"></view>
 				<text>课表收集</text>
 			</navigator>
 		</view>
 		<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
 			<navigator url="/pages/wumei/dutyList/dutyList" hover-class="none">
-				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<view class="cuIcon-vipcard text-cyan"></view>
 				<text>值班安排</text>
 			</navigator>
 		</view>
 		<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
 			<navigator url="/pages/wumei/activeList/activeList" hover-class="none">
-				<view class="cuIcon-evaluate_fill text-cyan"></view>
+				<view class="cuIcon-read text-cyan"></view>
 				<text>活动安排</text>
 			</navigator>
 		</view>
