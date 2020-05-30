@@ -1,11 +1,4 @@
-<!-- <text>pages/test/test.wxml</text>
 
-
-<import src="../../wxParse/wxParse.wxml" />
-
-<template is="wxParse" data="{{wxParseData:article.nodes}}" />
-<button bindtap="copyFileUrl">copy</button>
- -->
 
 
 <view class="cu-bar bg-white margin-top">
