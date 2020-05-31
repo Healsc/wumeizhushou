@@ -15,7 +15,7 @@ Page({
             '活动室109', '活动室110', '活动室111',
             '活动室113', '活动室212',
             '活动室309', '活动室310',
-            '活动室312', '活动室314', '活动室317', '活动室318','活动室320'
+            '活动室312', '活动室314', '活动室317', '活动室318', '活动室320'
         ]
     },
     getOpenID() {
@@ -91,6 +91,7 @@ Page({
                 content: '手机号有误，请检查',
             })
         } else {
+            console.log(this.data.applyNumber)
             wx.showModal({
                 title: '提示',
                 content: '确定提交?',
@@ -98,7 +99,7 @@ Page({
                 confirmText: '是',
                 success: res => {
                     if (res.confirm) {
-                        if (this.data.applyNumber._isPass) {
+                        if (this.data.applyNumber._name) {
                             const db = wx.cloud.database();
                             db.collection('active-room-apply').add({
                                 data: {
@@ -116,7 +117,8 @@ Page({
                                     _isPass: 1,
                                     /* 0拒绝  1审核中 2 通过*/
                                     _post_date: new Date(),
-                                    _post_show_date: this.getDate()
+                                    _post_show_date: this.getDate(),
+                                    _apply_id:this.data.applyNumber._id
                                 }
                             }).then(res => {
                                 wx.showToast({
@@ -125,24 +127,13 @@ Page({
                                     duration: 3000
                                 })
                                 setTimeout(() => {
-                                    wx.navigateTo({
+                                    wx.redirectTo({
                                         url: '/pages/wumei/myApplyRoom/myApplyRoom',
-                                    })
+                                      })
+                                  /*   wx.navigateTo({
+                                        url: '/pages/wumei/myApplyRoom/myApplyRoom',
+                                    }) */
                                 }, 1000)
-                            })
-                        } else if (this.data.applyNumber._name) {
-                            wx.showModal({
-                                title: '组织/社团认证中',
-                                content: '请前往 我的->组织/社团认证',
-                                cancelText: '否',
-                                confirmText: '是',
-                                success: res => {
-                                    if (res.confirm) {
-                                        wx.navigateTo({
-                                            url: '/pages/profile/zzSTNumberInfo/zzSTNumberInfo',
-                                        })
-                                    }
-                                }
                             })
                         } else {
                             wx.showModal({

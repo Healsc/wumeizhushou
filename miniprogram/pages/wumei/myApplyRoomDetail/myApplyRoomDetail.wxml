@@ -45,7 +45,7 @@
 </view>
 <view class="cu-form-group " wx:if="{{applyDetail._isPass == 0}}">
 	<view class="title gudingwidth">备注</view>
-	<text class='text-center  mauve'>预约时间冲突或活动内容不符合预约条件</text>
+	<text class='text-center  text-mauve'>预约时间冲突或活动内容不符合预约条件</text>
 </view>
 <view class="cu-form-group " wx:if="{{applyDetail._isPass != 0}}">
 	<view class="title gudingwidth">备注</view>

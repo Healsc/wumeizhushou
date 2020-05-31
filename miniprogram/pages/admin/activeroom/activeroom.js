@@ -57,7 +57,7 @@ Page({
             this.setData({
                 applyCount: res.result.total
             })
-          
+
         })
     },
     tabSelect(e) {
@@ -73,62 +73,15 @@ Page({
         that.getActiveApplyByIsPass();
         that.getCount();
     },
-    notPass(e) {
-        wx.cloud.callFunction({
-            name: 'updataApplyIsPass',
-            data: {
-                id: e.target.dataset.id,
-                ispass: 0
-            }
-        }).then(res => {
-            let that = this;
-            that.setData({
-                applyList: []
-            })
-            that.getActiveApplyByIsPass();
-            that.getCount();
-        })
 
-    },
-    pass(e) {
-        wx.cloud.callFunction({
-            name: 'updataApplyIsPass',
-            data: {
-                id: e.target.dataset.id,
-                ispass: 2
-            }
-        }).then(res => {
-            let that = this;
-            that.setData({
-                applyList: []
-            })
-            that.getActiveApplyByIsPass();
-            that.getCount();
-        })
-
-    },
-    toWait(e){
-        wx.cloud.callFunction({
-            name: 'updataApplyIsPass',
-            data: {
-                id: e.target.dataset.id,
-                ispass: 1
-            }
-        }).then(res => {
-            let that = this;
-            that.setData({
-                applyList: []
-            })
-            that.getActiveApplyByIsPass();
-            that.getCount();
-        })
-    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.getActiveApplyByIsPass();
-        this.getCount();
+        /* let that = this;
+       
+        that.getActiveApplyByIsPass();
+        that.getCount(); */
     },
 
     /**
@@ -142,7 +95,15 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
+        let that = this;
+         
+        that.setData({
+            applyList: [],
+            applyCount: ''
 
+        })
+        that.getActiveApplyByIsPass();
+        that.getCount();
     },
 
     /**
@@ -183,7 +144,7 @@ Page({
         } else {
             wx.showToast({
                 title: '到底了',
-                icon:'none',
+                icon: 'none',
                 duration: 1000
             })
         }

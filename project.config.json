@@ -426,6 +426,42 @@
 					"id": -1,
 					"name": "pages/wumei/activeList/activeList",
 					"pathName": "pages/wumei/activeList/activeList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/activeroom/activeroom",
+					"pathName": "pages/admin/activeroom/activeroom",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 57,
+					"name": "pages/admin/activeroomDetail/activeroomDetail",
+					"pathName": "pages/admin/activeroomDetail/activeroomDetail",
+					"query": "id=baada3ac5ed3107300142c0d6f010fd4",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/zzStNumber/zzStNumber",
+					"pathName": "pages/admin/zzStNumber/zzStNumber",
+					"query": "id=baada3ac5ed3107300142c0d6f010fd4",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动室申请管理",
+					"pathName": "pages/admin/activeroom/activeroom",
+					"query": "id=baada3ac5ed3107300142c0d6f010fd4",
+					"scene": null
+				},
+				{
+					"id": 60,
+					"name": "pages/admin/activeroomDetail/activeroomDetail",
+					"pathName": "pages/admin/activeroomDetail/activeroomDetail",
+					"query": "id=baada3ac5ed3107300142c0d6f010fd4",
 					"scene": null
 				}
 			]

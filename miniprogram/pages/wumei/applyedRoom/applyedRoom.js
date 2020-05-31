@@ -8,7 +8,7 @@ Page({
         roomList: '',
         TabCur: 0,
         scrollLeft: 0,
-        rid: 104,
+        rid: 101,
         date: "",
         activeroomList: [],
         isShowToast:false
@@ -20,7 +20,7 @@ Page({
         wx.cloud.callFunction({
             name: 'getActiveroomList',
             data: {
-                rid: this.data.rid,
+                rid: '活动室'+this.data.rid,
                 date: this.data.date
             }
         }).then(res => {

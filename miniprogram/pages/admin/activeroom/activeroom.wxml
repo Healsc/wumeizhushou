@@ -14,7 +14,7 @@
 
 <view>
 	<block wx:for="{{applyList}}" wx:key="index">
-		<view class="container">
+		<navigator url="/pages/admin/activeroomDetail/activeroomDetail?id={{item._id}}" hover-class="none" class="container">
 			<view class="part">
 				<view class="title">活动室：</view>
 				<view class="content">{{item._active_room}}</view>
@@ -51,25 +51,9 @@
 				<view class="title">申请人：</view>
 				<view class="content">{{item._apply_department_position}}\r\t{{item._apply_name}}</view>
 			</view>
-			<view wx:if="{{isPass == 1}}" class=" flex flex-wrap justify-between align-center bg-white" style="margin-top:40rpx">
-				<button bindtap="notPass" data-id="{{item._id}}"  class="cu-btn round  bg-red">拒绝</button>
-				<button bindtap="pass" data-id="{{item._id}}"  class="cu-btn round  bg-green">通过</button>
-			</view>
-			<view wx:if="{{isPass == 2}}" class=" flex flex-wrap justify-between align-center bg-white" style="margin-top:40rpx">
-				<button bindtap="notPass" data-id="{{item._id}}"  class="cu-btn round  bg-red">拒绝</button>
-				<button bindtap="toWait" data-id="{{item._id}}"  class="cu-btn round  bg-orange">待处理</button>
-			</view>
-			<view wx:if="{{isPass == 0}}" class=" flex flex-wrap justify-between align-center bg-white" style="margin-top:40rpx">
-				<button bindtap="toWait" data-id="{{item._id}}"  class="cu-btn round  bg-orange">待处理</button>
-				<button bindtap="pass" data-id="{{item._id}}"  class="cu-btn round  bg-green">通过</button>
-			</view>
-			<!--  _apply_department_position -->
-			<!-- <view class=" flex flex-wrap justify-between align-center bg-white" style="margin-top:40rpx">
-				<button wx:if="{{!isWM}}" bindtap="failToPass" data-id="{{item._id}}" data-iswm="{{item._isWM}}" class="cu-btn round  bg-green">通过</button>
-				<button wx:if="{{isWM}}" bindtap="passTofail" data-id="{{item._id}}" data-iswm="{{item._isWM}}" class="cu-btn round  bg-orange">取消通过</button>
-				<button bindtap="del" data-id="{{item._id}}" class="cu-btn round  bg-red">删除</button>
-			</view> -->
-		</view>
+			
+			
+		</navigator>
 
 	</block>
 </view>

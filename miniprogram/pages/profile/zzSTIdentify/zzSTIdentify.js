@@ -119,7 +119,7 @@ Page({
                             })
                             db.collection('zzSTNumber').add({
                                 data: {
-                                    _id: e.detail.value.department + e.detail.value.position + e.detail.value.name + Math.floor(Math.random() * 100),
+                                    _id: e.detail.value.department + e.detail.value.position + e.detail.value.name + Math.floor(Math.random() * 10000),
                                     _fileIds: this.data.fileIds,
                                     _name: e.detail.value.name,
                                     _studentNumber: e.detail.value.studentNumber,

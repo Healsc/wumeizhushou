@@ -7,9 +7,5 @@ const db = cloud.database();
 exports.main = async (event, context) => {
     const wxContext = cloud.getWXContext()
 
-    return await db.collection('active-room-apply').where({
-        _active_room:event.rid,
-        _active_date:event.date,
-        _isPass:2
-    }).orderBy('_active_start','asc').get()
+    return await db.collection('zzSTNumber').doc(event.id).get()
 }

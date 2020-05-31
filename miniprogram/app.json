@@ -33,17 +33,20 @@
         "pages/profile/zzSTNumberInfo/zzSTNumberInfo",
 
         "pages/admin/admin/admin",
-        "pages/admin/addNotice/addNotice",
+       
         "pages/admin/addDuty/addDuty",
         "pages/admin/updataDepartment/updataDepartment",
-        "pages/admin/addActiveJuchang/addActiveJuchang",
+       
         "pages/admin/addActiveHDS/addActiveHDS",
-        "pages/admin/addActiveDahuo/addActiveDahuo",
+       
         "pages/admin/updataActiveRoomIntroduce/updataActiveRoomIntroduce",
         "pages/admin/wumeiNumber/wumeiNumber",
         "pages/admin/zzStNumber/zzStNumber",
-        "pages/admin/activeroom/activeroom",
+        "pages/admin/zzStNumberDetail/zzStNumberDetail",
 
+
+        "pages/admin/activeroom/activeroom",
+        "pages/admin/activeroomDetail/activeroomDetail",
 
         "pages/test/test"
     ],

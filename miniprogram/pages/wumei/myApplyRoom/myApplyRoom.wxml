@@ -28,7 +28,7 @@
 					</view>
 
 					<view>
-						活动时间：{{item._active_start}}-{{item._active_end}}
+						活动时间：{{item._active_date}} \r\t \r\t{{item._active_start}}-{{item._active_end}}
 					</view>
 					<view class="text-red" wx:if="{{item._isPass == 0}}">
 						当前状态：预约失败

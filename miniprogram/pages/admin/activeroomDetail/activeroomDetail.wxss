@@ -1,0 +1,3 @@
+.gudingwidth{
+    min-width: 80px;
+}

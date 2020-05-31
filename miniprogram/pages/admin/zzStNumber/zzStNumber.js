@@ -65,56 +65,8 @@ Page({
 
         })
     },
-    failToPass(e) {
-        wx.cloud.callFunction({
-            name: 'updataZzStNumber',
-            data: {
-                id: e.target.dataset.id,
-                ispass: !e.target.dataset.ispass
-            }
-        }).then(res => {
-            let that = this;
-            that.setData({
-                zzStNumberList: [],
-                zzStNumberCount: ""
-            })
-            that.getzzStNumber();
-            that.getzzStNumberCount();
-        })
-    },
-    passTofail(e) {
-        wx.cloud.callFunction({
-            name: 'updataZzStNumber',
-            data: {
-                id: e.target.dataset.id,
-                ispass: !e.target.dataset.ispass
-            }
-        }).then(res => {
-            let that = this;
-            that.setData({
-                zzStNumberList: [],
-                zzStNumberCount: ""
-            })
-            that.getzzStNumber();
-            that.getzzStNumberCount();
-        })
-    },
-    del(e) {
-        wx.cloud.callFunction({
-            name: 'delZzStNumber',
-            data: {
-                id: e.target.dataset.id
-            }
-        }).then(res => {
-            let that = this;
-            that.setData({
-                zzStNumberList: [],
-                zzStNumberCount: ""
-            })
-            that.getzzStNumber();
-            that.getzzStNumberCount();
-        })
-    },
+   
+
     /**
      * 生命周期函数--监听页面加载
      */
@@ -135,7 +87,13 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        let that = this;
+        that.setData({
+            zzStNumberList: [],
+            zzStNumberCount: ""
+        })
+        that.getzzStNumber();
+        that.getzzStNumberCount();
     },
 
     /**

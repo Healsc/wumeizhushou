@@ -1,0 +1,62 @@
+<view class="cu-form-group margin-top ">
+	<view class="title gudingwidth">活动名</view>
+	<text class='text-center '>{{applyDetail._active_name}}</text>
+</view>
+<view class="cu-form-group ">
+	<view class="title gudingwidth">活动内容</view>
+	<text class='text-center '>{{applyDetail._active_content}}</text>
+</view>
+<view class="cu-form-group ">
+	<view class="title gudingwidth">预约组织/社团</view>
+	<text class='text-center '>{{applyDetail._active_department}}</text>
+</view>
+
+<view class="cu-form-group ">
+	<view class="title">预约教室</view>
+	<text class='text-center '>{{applyDetail._active_room}}</text>
+</view>
+
+<view class="cu-form-group ">
+	<view class="title">使用时间</view>
+	<text class='text-center'>{{applyDetail._active_date}} \r\t \r\t {{applyDetail._active_start}}-{{applyDetail._active_end}}</text>
+</view>
+
+<view class="cu-form-group ">
+	<view class="title">活动负责人</view>
+	<text class='text-center '>{{applyDetail._person_name}}</text>
+</view>
+<view class="cu-form-group ">
+	<view class="title">负责人联系方式</view>
+	<text class='text-center '>{{applyDetail._person_phone}}</text>
+</view>
+<view class="cu-form-group ">
+	<view class="title">申请时间</view>
+	<text class='text-center '>{{applyDetail._post_show_date}}</text>
+</view>
+<view class="cu-form-group ">
+	<view class="title">当前状态</view>
+	<text wx:if="{{applyDetail._isPass == 1}}" class='text-center text-orange'>待处理</text>
+	<text wx:if="{{applyDetail._isPass == 0}}" class='text-center text-brown'>拒绝</text>
+	<text wx:if="{{applyDetail._isPass == 2}}" class='text-center text-green'>通过</text>
+</view>
+
+<navigator url="/pages/admin/zzStNumberDetail/zzStNumberDetail?id={{applyPerson._id}}" hover-class="none" class="cu-form-group margin-top">
+	<view class="title">申请人信息</view>
+	<text wx:if="{{!applyPerson._isPass}}" class='text-center bg-olive'>未通过认证</text>
+	<text wx:if="{{applyPerson._isPass}}" class='text-center bg-cyan'>已通过认证</text>
+</navigator>
+<view wx:if="{{applyDetail._isPass == 1}}" class="padding flex flex-direction">
+	<button bindtap="notPass" data-id="{{applyDetail._id}}" class="cu-btn bg-brown lg">拒绝</button>
+	<button bindtap="pass" data-id="{{applyDetail._id}}" class="cu-btn bg-green margin-tb-sm lg">通过</button>
+</view>
+
+<view wx:if="{{applyDetail._isPass == 2}}" class="padding flex flex-direction">
+
+	<button bindtap="notPass" data-id="{{applyDetail._id}}" class="cu-btn bg-brown lg">拒绝</button>
+	<button bindtap="toWait" data-id="{{applyDetail._id}}" class="cu-btn bg-orange margin-tb-sm lg">待处理</button>
+</view>
+
+<view wx:if="{{applyDetail._isPass == 0}}" class="padding flex flex-direction">
+	<button bindtap="toWait" data-id="{{applyDetail._id}}" class="cu-btn bg-orange lg">待处理</button>
+	<button bindtap="pass" data-id="{{applyDetail._id}}" class="cu-btn bg-green margin-tb-sm lg">通过</button>
+</view>
