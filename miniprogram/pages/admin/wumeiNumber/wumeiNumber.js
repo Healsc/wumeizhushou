@@ -64,63 +64,14 @@ Page({
 
         })
     },
-    failToPass(e) {
-        wx.cloud.callFunction({
-            name: 'updataWMNumber',
-            data: {
-                id: e.target.dataset.id,
-                iswm: !e.target.dataset.iswm
-            }
-        }).then(res => {
-            let that = this;
-            that.setData({
-                WMNumberList: [],
-                wumeiNumberCount: ""
-            })
-            that.getWMNumber();
-            that.getWMNumberCount();
-        })
-    },
-    passTofail(e) {
-        wx.cloud.callFunction({
-            name: 'updataWMNumber',
-            data: {
-                id: e.target.dataset.id,
-                iswm: !e.target.dataset.iswm
-            }
-        }).then(res => {
-            let that = this;
-            that.setData({
-                WMNumberList: [],
-                wumeiNumberCount: ""
-            })
-            that.getWMNumber();
-            that.getWMNumberCount();
-        })
-    },
-    del(e) {
-        wx.cloud.callFunction({
-            name: 'delWMNumber',
-            data: {
-                id: e.target.dataset.id
-            }
-        }).then(res => {
-            let that = this;
-            that.setData({
-                WMNumberList: [],
-                wumeiNumberCount: ""
-            })
-            that.getWMNumber();
-            that.getWMNumberCount();
-        })
-    },
+ 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
 
-        this.getWMNumber();
-        this.getWMNumberCount();
+       
+        
     },
 
     /**
@@ -134,7 +85,12 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        this.setData({
+            WMNumberList:[],
+            wumeiNumberCount:''
+        })
+        this.getWMNumber();
+        this.getWMNumberCount();
     },
 
     /**

@@ -13,7 +13,7 @@
 </scroll-view>
 <view>
 	<block wx:for="{{WMNumberList}}" wx:key="index">
-		<view class="part">
+		<navigator url="/pages/admin/wumeiNumberDetail/wumeiNumberDetail?id={{item._id}}" hover-class="none" class="part">
 			<view style="display:flex">
 				<view style="flex:1">姓名</view>
 				<view style="flex:3">{{item._name}}</view>
@@ -26,7 +26,7 @@
 				<view style="flex:1">职务：</view>
 				<view style="flex:3">{{item._position}}</view>
 			</view>
-			<view style="display:flex">
+			<!-- <view style="display:flex">
 				<view style="flex:1">学院：</view>
 				<view style="flex:3">{{item._academy}}</view>
 			</view>
@@ -41,13 +41,13 @@
 			<view style="display:flex">
 				<view style="flex:1">手机号：</view>
 				<view style="flex:3">{{item._phone}}</view>
-			</view>
-			<view  class=" flex flex-wrap justify-between align-center bg-white" style="margin-top:40rpx">
+			</view> -->
+			<!-- <view  class=" flex flex-wrap justify-between align-center bg-white" style="margin-top:40rpx">
 				<button wx:if="{{!isWM}}" bindtap="failToPass" data-id="{{item._id}}" data-iswm="{{item._isWM}}" class="cu-btn round  bg-green">通过</button>
 				<button wx:if="{{isWM}}" bindtap="passTofail" data-id="{{item._id}}" data-iswm="{{item._isWM}}" class="cu-btn round  bg-orange">取消通过</button>
 				<button   bindtap="del" data-id="{{item._id}}" class="cu-btn round  bg-red">删除</button>
-			</view>
-		</view>
+			</view> -->
+		</navigator>
 
 	</block>
 </view>

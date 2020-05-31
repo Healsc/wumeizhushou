@@ -23,13 +23,14 @@ Page({
                 that.setData({
                     openid: openid
                 })
+                that.getWMNumberInfo();
                
             }
         })
     },
 
     onLoad: function (options) {
-        this.getWMNumberInfo();
+        this.getOpenid();
     },
     getWMNumberInfo() {
         const db = wx.cloud.database({

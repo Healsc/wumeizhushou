@@ -1,6 +1,6 @@
 <cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
 	<view slot="left">返回</view>
-	<view slot="content">活动室申请管理</view>
+	<view slot="content">活动室预约管理</view>
 </cu-custom>
 
 <scroll-view scroll-x class="bg-white nav">
@@ -23,10 +23,7 @@
 				<view class="title">活动名称：</view>
 				<view class="content">{{item._active_name}}</view>
 			</view>
-			<view style="display:flex">
-				<view class="title">活动内容：</view>
-				<view class="content">{{item._active_content}}</view>
-			</view>
+			
 			<view style="display:flex">
 				<view class="title">活动时间：</view>
 				<view class="content">{{item._active_date}} \r\t {{item._active_start}}- {{item._active_end}}</view>
@@ -36,23 +33,9 @@
 				<view class="content">{{item._active_department}}</view>
 			</view>
 			<view style="display:flex">
-				<view class="title">负责人：</view>
-				<view class="content">{{item._person_name}}</view>
-			</view>
-			<view style="display:flex">
-				<view class="title">联系方式：</view>
-				<view class="content">{{item._person_phone}}</view>
-			</view>
-			<view style="display:flex">
 				<view class="title">申请时间：</view>
 				<view class="content">{{item._post_show_date}}</view>
-			</view>
-			<view style="display:flex">
-				<view class="title">申请人：</view>
-				<view class="content">{{item._apply_department_position}}\r\t{{item._apply_name}}</view>
-			</view>
-			
-			
+			</view>			
 		</navigator>
 
 	</block>

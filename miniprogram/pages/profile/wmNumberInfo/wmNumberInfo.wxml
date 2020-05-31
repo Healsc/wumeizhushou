@@ -2,48 +2,42 @@
 	<view slot="left">返回</view>
 	<view slot="content">认证信息</view>
 </cu-custom>
+<view class="container" >
+	<image wx:if="{{isWM}}" src='/images/renzhengchenggong.png' class='show-img'></image>
+	<image wx:if="{{!isWM}}" src='/images/shenhezhong.png' class='show-img'></image>
+	<view class='naxinInfo'>
+		<view class="cu-form-group margin-top pad-left">
+			<view class="title">姓名</view>
+			<text class='text-center pad-left-cont'>{{wumeiNumberInfo._name}}</text>
+		</view>
+		<view class="cu-form-group pad-left">
+			<view class="title">性别</view>
+			<text class='text-center pad-left-cont'>{{wumeiNumberInfo._sex}}</text>
+		</view>
+		<view class="cu-form-group pad-left">
+			<view class="title">部门</view>
+			<text class='text-center pad-left-cont'>{{wumeiNumberInfo._department}}</text>
+		</view>
+		<view class="cu-form-group pad-left">
+			<view class="title">职务</view>
+			<text class='text-center pad-left-cont'>{{wumeiNumberInfo._position}}</text>
+		</view>
 
-<image wx:if="{{isWM}}" src='/images/renzhengchenggong.png' class='show-img'></image>
-<image wx:if="{{!isWM}}" src='/images/shenhezhong.png' class='show-img'></image>
-<view class='naxinInfo'>
-	<view class="cu-form-group margin-top pad-left">
-		<view class="title">姓名</view>
-		<text class='text-center pad-left-cont'>{{wumeiNumberInfo._name}}</text>
-	</view>
-	<view class="cu-form-group pad-left">
-		<view class="title">性别</view>
-		<text class='text-center pad-left-cont'>{{wumeiNumberInfo._sex}}</text>
-	</view>
-	<view class="cu-form-group pad-left">
-		<view class="title">部门</view>
-		<text class='text-center pad-left-cont'>{{wumeiNumberInfo._department}}</text>
-	</view>
-	<view class="cu-form-group pad-left">
-		<view class="title">职务</view>
-		<text class='text-center pad-left-cont'>{{wumeiNumberInfo._position}}</text>
-	</view>
-
-	<view class="cu-form-group pad-left">
-		<view class="title">学院</view>
-		<text class='text-center pad-left-cont'>{{wumeiNumberInfo._academy}}</text>
-	</view>
-	<view class="cu-form-group pad-left">
-		<view class="title">班级</view>
-		<text class='text-center pad-left-cont'>{{wumeiNumberInfo._major}}</text>
-	</view>
-	<view class="cu-form-group pad-left">
-		<view class="title">学号</view>
-		<text class='text-center pad-left-cont'>{{wumeiNumberInfo._studentNumber}}</text>
-	</view>
-	<navigator  url="/pages/admin/admin/admin" wx:if="{{isAdmin}}" class="cu-form-group pad-left">
-		<view class="title">管理</view>
-		<text class='text-center pad-left-cont'>欢迎你</text>
-	</navigator>
-</view>
-<!-- <view class="cu-list menu   margin-bottom-xl shadow-lg radius" style='margin-top:1rpx'>
-	<view wx:if="{{isAdmin}}" class="cu-item arrow">
-		<navigator url="/pages/admin/admin/admin" class="content" hover-class="none">
-			<text class="text-grey">管理</text>
+		<view class="cu-form-group pad-left">
+			<view class="title">学院</view>
+			<text class='text-center pad-left-cont'>{{wumeiNumberInfo._academy}}</text>
+		</view>
+		<view class="cu-form-group pad-left">
+			<view class="title">班级</view>
+			<text class='text-center pad-left-cont'>{{wumeiNumberInfo._major}}</text>
+		</view>
+		<view class="cu-form-group pad-left">
+			<view class="title">学号</view>
+			<text class='text-center pad-left-cont'>{{wumeiNumberInfo._studentNumber}}</text>
+		</view>
+		<navigator url="/pages/admin/admin/admin" wx:if="{{isAdmin}}" class="cu-form-group pad-left">
+			<view class="title">管理</view>
+			<text class='text-center pad-left-cont'>欢迎你</text>
 		</navigator>
 	</view>
-</view> -->
+</view>

@@ -1,33 +1,19 @@
 <cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
 	<view slot="left">返回</view>
-	<view slot="content">认证信息</view>
+	<view slot="content">管理端</view>
 </cu-custom>
 
-<view class="cu-list menu   margin-bottom-xl shadow-lg radius" style='margin-top:1rpx'>
 
-	<view class="cu-item arrow">
-		<navigator class="content" url="/pages/admin/addActiveDahuo/addActiveDahuo" hover-class="none">
-			<text class="text-grey">添加大活</text>
-		</navigator>
-	</view>
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
 	<view class="cu-item arrow">
 		<navigator class="content" url="/pages/admin/addActiveHDS/addActiveHDS" hover-class="none">
-			<text class="text-grey">添加音乐厅活动室</text>
+			<text class="text-grey">添加活动室活动</text>
 		</navigator>
 	</view>
-	<view class="cu-item arrow">
-		<navigator class="content" url="/pages/admin/addActiveJuchang/addActiveJuchang" hover-class="none">
-			<text class="text-grey">添加音乐厅剧场</text>
-		</navigator>
-	</view>
-	<view class="cu-item arrow">
-		<navigator class="content" url="/pages/admin/addNotice/addNotice" hover-class="none">
-			<text class="text-grey">发布通知</text>
-		</navigator>
-	</view>
+	
 	<view class="cu-item arrow">
 		<navigator class="content" url="/pages/admin/addDuty/addDuty" hover-class="none">
-			<text class="text-grey">发布值班</text>
+			<text class="text-grey">添加值班</text>
 		</navigator>
 	</view>
 	<view class="cu-item arrow">
@@ -47,7 +33,7 @@
 	</view>
 	<view class="cu-item arrow">
 		<navigator class="content" url="/pages/admin/activeroom/activeroom" hover-class="none">
-			<text class="text-grey">活动室申请管理</text>
+			<text class="text-grey">活动室预约管理</text>
 		</navigator>
 	</view>
 </view>

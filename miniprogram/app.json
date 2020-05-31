@@ -41,9 +41,9 @@
        
         "pages/admin/updataActiveRoomIntroduce/updataActiveRoomIntroduce",
         "pages/admin/wumeiNumber/wumeiNumber",
+        "pages/admin/wumeiNumberDetail/wumeiNumberDetail",
         "pages/admin/zzStNumber/zzStNumber",
         "pages/admin/zzStNumberDetail/zzStNumberDetail",
-
 
         "pages/admin/activeroom/activeroom",
         "pages/admin/activeroomDetail/activeroomDetail",

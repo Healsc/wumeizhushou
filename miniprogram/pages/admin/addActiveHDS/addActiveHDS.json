@@ -1,9 +1,8 @@
 {
-  "navigationBarTitleText": "添加音乐厅活动室",
+  "navigationBarTitleText": "更新音乐厅活动室",
   "disableScroll": true,
 
   "usingComponents": {
    
   }
-
 }

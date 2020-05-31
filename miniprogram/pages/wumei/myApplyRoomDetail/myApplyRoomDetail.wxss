@@ -1,3 +1,9 @@
 .gudingwidth{
     min-width: 80px;
 }
+.container {
+    padding: 6rpx;
+    margin: 30rpx 20rpx;
+    border-radius: 20rpx;
+    background-color: #ffffff
+}

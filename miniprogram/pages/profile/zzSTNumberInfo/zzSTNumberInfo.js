@@ -22,14 +22,17 @@ Page({
                 that.setData({
                     openid: openid
                 })
+                that.getnumberInfo();
             }
         })
     },
 
     onLoad: function (options) {
-        this.getnumberInfo();
+        this.getOpenid();
+        
     },
     getnumberInfo() {
+        console.log('ss')
         const db = wx.cloud.database({
             //env: 'wumei-2070bb'
         })
@@ -37,10 +40,12 @@ Page({
             _openid: this.data.openid // 填入当前用户 openid
         }).get({
             success: (res) => {
+                console.log(res.data)
                 wx.stopPullDownRefresh({
                     complete: (res) => {},
                 })
                 if (res.data.length) {
+                    console.log('ss')
                     this.setData({
                         numberInfo: res.data[0],
                         isPass: res.data[0]._isPass

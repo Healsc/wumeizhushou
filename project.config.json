@@ -463,6 +463,27 @@
 					"pathName": "pages/admin/activeroomDetail/activeroomDetail",
 					"query": "id=baada3ac5ed3107300142c0d6f010fd4",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "舞美认证管理",
+					"pathName": "pages/admin/wumeiNumber/wumeiNumber",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/zzSTNumberInfo/zzSTNumberInfo",
+					"pathName": "pages/profile/zzSTNumberInfo/zzSTNumberInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/wmNumberInfo/wmNumberInfo",
+					"pathName": "pages/profile/wmNumberInfo/wmNumberInfo",
+					"query": "",
+					"scene": null
 				}
 			]
 		}
