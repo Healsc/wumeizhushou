@@ -70,7 +70,7 @@
 		<text>活动安排</text>
 	</view>
 </view>
-<view class="cu-list grid col-4 no-border">
+<!-- <view class="cu-list grid col-4 no-border">
 	<view class="cu-item" class="cu-item" bindtap='showQrcode' hover-class="none">
 		<view class="cuIcon-evaluate_fill text-cyan"></view>
 		<text>活动室活动</text>
@@ -83,4 +83,4 @@
 		<view class="cuIcon-evaluate_fill text-cyan"></view>
 		<text>剧场</text>
 	</view>
-</view>
+</view> -->
