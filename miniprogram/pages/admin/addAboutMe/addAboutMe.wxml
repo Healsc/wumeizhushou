@@ -21,10 +21,6 @@
 
 <view class="content">
 	<form>
-		<view class="cu-form-group margin-top">
-			<view class="title">活动室</view>
-			<input name="title" bind:input="getTitle" placeholder="例:第五周"></input>
-		</view>
 		<button class="bg-green" bindtap="clickLogText">更新</button>
 	</form>
 </view>

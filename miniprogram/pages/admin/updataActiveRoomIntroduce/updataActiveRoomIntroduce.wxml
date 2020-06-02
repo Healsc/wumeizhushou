@@ -29,7 +29,7 @@
 			<view class="title">唯一识别</view>
 			<input name="time" bind:input="getTime" placeholder="必须按要求。例:101"></input>
 		</view>
-		<button class="bg-green" bindtap="clickLogText">发布</button>
+		<button class="bg-green" bindtap="clickLogText">更新</button>
 	</form>
 </view>
 <scroll-view>

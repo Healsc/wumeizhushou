@@ -489,6 +489,27 @@
 					"id": -1,
 					"name": "pages/profile/zzSTIdentify/zzSTIdentify",
 					"pathName": "pages/profile/zzSTIdentify/zzSTIdentify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/admin/admin",
+					"pathName": "pages/admin/admin/admin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/addAboutMe/addAboutMe",
+					"pathName": "pages/admin/addAboutMe/addAboutMe",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/about/about",
+					"pathName": "pages/profile/about/about",
 					"scene": null
 				}
 			]

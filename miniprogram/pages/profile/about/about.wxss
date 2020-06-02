@@ -12,3 +12,10 @@
 .jiacu{
     font-weight: bold;
 }
+@import "/wxParse/wxParse.wxss";
+.detail{
+    margin: 40rpx 30rpx;
+    border-radius: 20rpx;
+    padding: 30rpx;
+    background-color: #ffffff;
+}

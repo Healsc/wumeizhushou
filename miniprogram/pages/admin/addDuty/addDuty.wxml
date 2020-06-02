@@ -25,7 +25,7 @@
 			<view class="title">标题</view>
 			<input name="title" bind:input="getTitle" placeholder="例:第一周"></input>
 		</view>
-		<button class="bg-green" bindtap="clickLogText">发布</button>
+		<button class="bg-green" bindtap="clickLogText">更新</button>
 	</form>
 </view>
 <scroll-view>

@@ -7,18 +7,23 @@
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
 	<view class="cu-item arrow">
 		<navigator class="content" url="/pages/admin/addActiveHDS/addActiveHDS" hover-class="none">
-			<text class="text-grey">添加活动室活动</text>
+			<text class="text-grey">更新活动室活动</text>
 		</navigator>
 	</view>
-	
+
 	<view class="cu-item arrow">
 		<navigator class="content" url="/pages/admin/addDuty/addDuty" hover-class="none">
-			<text class="text-grey">添加值班</text>
+			<text class="text-grey">更新值班</text>
 		</navigator>
 	</view>
 	<view class="cu-item arrow">
 		<navigator class="content" url="/pages/admin/updataActiveRoomIntroduce/updataActiveRoomIntroduce" hover-class="none">
-			<text class="text-grey">添加活动室介绍</text>
+			<text class="text-grey">更新活动室介绍</text>
+		</navigator>
+	</view>
+	<view class="cu-item arrow">
+		<navigator class="content" url="/pages/admin/addAboutMe/addAboutMe" hover-class="none">
+			<text class="text-grey">更新关于</text>
 		</navigator>
 	</view>
 	<view class="cu-item arrow">

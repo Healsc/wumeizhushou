@@ -4,7 +4,7 @@
 </cu-custom>
 
 
-<view class=' bg-white padding-xl radius shadow-lg bg-img '>
+<view wx:if="{{showAbout}}" class=' bg-white padding-xl radius shadow-lg bg-img '>
 	<view class='text-center margin-bottom text-lg  text-grey jiacu'>关于舞美助手小程序</view>
 	<view class='text-content about-content'>
 		<view class="jiacu">Hi！~欢迎使用舞美助手小程序！</view>
@@ -14,4 +14,8 @@
 		<view class='margin-top-sm jiacu'>对于小程序的不合理之处，请指正。</view>
 		<view class='margin-top-sm jiacu'>联系邮箱:wumeixiehui@163.com</view>
 	</view>
+</view>
+<view wx:if="{{showIntro}}" class="detail">
+	<import src="../../../wxParse/wxParse.wxml" />
+	<template is="wxParse" data="{{wxParseData:article.nodes}}" />
 </view>

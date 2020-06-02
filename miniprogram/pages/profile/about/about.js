@@ -6,14 +6,57 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        detail: {},
+        showAbout: false,
+        showIntro: false
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-       
+        wx.cloud.database().collection('show-about').doc('showabout').get().then(res => {
+            this.setData({
+                showAbout: res.data.showabout
+            })
+        })
+        wx.cloud.database().collection('show-about').doc('showIntro').get().then(res => {
+            this.setData({
+                showIntro: res.data.showIntro
+            })
+        })
+
+        wx.showLoading({
+            title: '加载中',
+        })
+
+        wx.cloud.database().collection('aboutme').get().then(res => {
+
+            wx.hideLoading({
+                complete: (res) => {},
+            })
+            var that = this;
+            WxParse.wxParse('article', 'html', res.data[0]._content, that, 3);
+            this.setData({
+                detail: res.data
+            })
+        })
+        /*  wx.cloud.callFunction({
+             name: 'getActiveDetail',
+             data: {
+                 id: options.id,
+                 activeid: 'huodongshi'
+             }
+         }).then(res => {
+             var that = this;
+             WxParse.wxParse('article', 'html', res.result.data._content, that, 3);
+             this.setData({
+                 activeDetail: res.result.data
+             })
+             wx.hideLoading({
+                 complete: (res) => {},
+             })
+         }) */
     },
 
     /**
@@ -48,7 +91,7 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-       
+
     },
 
     /**
