@@ -2,6 +2,7 @@ const app = getApp();
 
 Page({
     data: {
+        showPS: false,
         wumeiInfo: {},
         index: null,
         imgList: [],
@@ -64,7 +65,14 @@ Page({
             ]
         ]
     },
+    getPS() {
+        wx.cloud.database().collection('pianshen').doc('renzheng').get().then(res => {
 
+            this.setData({
+                showPS: res.data.renzheng
+            })
+        })
+    },
     //所属部门
     MultiChange(e) {
         this.setData({
@@ -321,7 +329,7 @@ Page({
     },
 
     onLoad: function (options) {
-
+        this.getPS();
     },
     //获取系统时间
     getDate() {

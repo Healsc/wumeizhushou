@@ -6,7 +6,8 @@ Page({
         index: null,
         imgList: [],
         fileIds: [],
-        multiIndex: [0, 0]
+        multiIndex: [0, 0],
+        showPS: false
     },
 
 
@@ -197,7 +198,14 @@ Page({
     },
 
     onLoad: function (options) {
-
+        this.getPS();
     },
-
+    getPS() {
+        wx.cloud.database().collection('pianshen').doc('renzheng').get().then(res => {
+          
+            this.setData({
+                showPS: res.data.renzheng
+            })
+        })
+    }
 })

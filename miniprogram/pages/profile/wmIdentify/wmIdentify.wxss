@@ -24,12 +24,7 @@
     padding-right: 6rpx;
 }
 
-.beizhu {
-    margin-top: 10rpx;
-    text-align: center;
-    font-size: 26rpx;
-    margin-bottom: 10rpx;
-}
+
 
 .pl-img {
     padding-left: 20rpx;

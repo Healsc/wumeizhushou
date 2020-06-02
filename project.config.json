@@ -484,6 +484,12 @@
 					"pathName": "pages/profile/wmNumberInfo/wmNumberInfo",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/zzSTIdentify/zzSTIdentify",
+					"pathName": "pages/profile/zzSTIdentify/zzSTIdentify",
+					"scene": null
 				}
 			]
 		}

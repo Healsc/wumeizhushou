@@ -49,34 +49,32 @@
 			</view>
 		</picker>
 	</view>
-
-	<view class="cu-bar bg-white margin-top pl-img">
-		<view class="action">
-			本人照片、学生证上传
+	<view wx:if="{{showPS}}">
+		<view class="cu-bar bg-white margin-top pl-img">
+			<view class="action">
+				本人照片、学生证上传
+			</view>
+			<view class="action">
+				{{imgList.length}}/2
+			</view>
 		</view>
-		<view class="action">
-			{{imgList.length}}/2
-		</view>
-	</view>
-	<view class="cu-form-group">
-		<view class="grid col-2 grid-square flex-sub">
-			<view class="padding-xs bg-img" style="background-image:url({{imgList[index]}})" wx:for="{{imgList}}" wx:key="index" bindtap="ViewImage" data-url="{{imgList[index]}}">
-				<view class="cu-tag bg-red" catchtap="DelImg" data-index="index">
-					<text class="cuIcon-close"></text>
+		<view class="cu-form-group">
+			<view class="grid col-3 grid-square flex-sub">
+				<view class="padding-xs bg-img" style="background-image:url({{imgList[index]}})" wx:for="{{imgList}}" wx:key="index" bindtap="ViewImage" data-url="{{imgList[index]}}">
+					<view class="cu-tag bg-red" catchtap="DelImg" data-index="index">
+						<text class="cuIcon-close"></text>
+					</view>
+				</view>
+				<view class="padding-xs solids" bindtap="ChooseImage" wx:if="{{imgList.length<2}}">
+					<text class="cuIcon-cameraadd"></text>
 				</view>
 			</view>
-			<view class="padding-xs solids" bindtap="ChooseImage" wx:if="{{imgList.length<2}}">
-				<text class="cuIcon-cameraadd"></text>
-			</view>
 		</view>
 	</view>
+
 
 
 	<view class="padding flex flex-direction bg-white margin-top">
 		<button form-type="submit" class="cu-btn bg-green margin-tb-sm lg">确认提交</button>
 	</view>
 </form>
-
-<view class='beizhu'>
-	注：此页面所收集信息仅为舞美协会认证和存档使用，不会另作他用
-</view>
