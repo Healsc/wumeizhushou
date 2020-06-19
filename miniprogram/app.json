@@ -35,7 +35,7 @@
         "pages/admin/admin/admin",
 
         "pages/admin/addDuty/addDuty",
-        "pages/admin/updataDepartment/updataDepartment",
+        "pages/admin/addAboutMe/addAboutMe",
 
         "pages/admin/addActiveHDS/addActiveHDS",
 
@@ -44,7 +44,7 @@
         "pages/admin/wumeiNumberDetail/wumeiNumberDetail",
         "pages/admin/zzStNumber/zzStNumber",
         "pages/admin/zzStNumberDetail/zzStNumberDetail",
-        "pages/admin/addAboutMe/addAboutMe",
+       
         "pages/admin/activeroom/activeroom",
         "pages/admin/activeroomDetail/activeroomDetail",
 

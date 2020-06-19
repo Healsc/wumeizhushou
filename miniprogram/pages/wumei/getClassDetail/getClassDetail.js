@@ -37,7 +37,6 @@ Page({
 
 
     onLoad: function (options) {
-        console.log(options);
         this.setData({
             weekId: options.week
         })
@@ -46,6 +45,7 @@ Page({
     },
     // 获取用户openid
     getOpenid() {
+        console.log(this.data.isWM)
         let that = this;
         wx.cloud.callFunction({
             name: 'login',
@@ -54,6 +54,7 @@ Page({
                 that.setData({
                     openid: openid
                 })
+                this.getUserInfo();
             }
         })
     },
